@@ -7,6 +7,9 @@
   try { cfg = JSON.parse(localStorage.getItem(CFG_KEY) || '{}') || {}; } catch (e) {}
   function saveCfg() { try { localStorage.setItem(CFG_KEY, JSON.stringify(cfg)); } catch (e) {} }
 
+  // the local word list snapshot travels with the progress, so another device gets your words too
+  if (!S.csvText && window.GR_WORDS_CSV) { S.csvText = window.GR_WORDS_CSV; S.csvAt = S.csvAt || 1; }
+
   // state: off | idle | busy | error
   App.sync = {state: cfg.token ? 'idle' : 'off', at: cfg.at || 0, error: ''};
 
