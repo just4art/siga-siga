@@ -1,0 +1,66 @@
+{
+ "id": "w01",
+ "series": "why",
+ "chapter": 1,
+ "title": "Γιατί η θάλασσα είναι αλμυρή;",
+ "title_en": "Why is the sea salty?",
+ "level": "A2",
+ "theme": "science",
+ "summary_en": "Where the salt in the sea comes from: rain, rocks, rivers and evaporation. With a small experiment you can do at home, the salt pans of Mesolongi, and why the Mediterranean is saltier than the Atlantic.",
+ "paragraphs": [
+  [
+   ["Όταν κολυμπάς στη θάλασσα και πίνεις λίγο νερό κατά λάθος, το καταλαβαίνεις αμέσως: το νερό είναι αλμυρό.", "When you swim in the sea and drink a little water by mistake, you notice it at once: the water is salty."],
+   ["Το νερό στα ποτάμια και στις λίμνες όμως δεν είναι αλμυρό.", "But the water in rivers and lakes isn't salty."],
+   ["Πώς γίνεται αυτό; Από πού έρχεται το αλάτι;", "How can that be? Where does the salt come from?"]
+  ],
+  [
+   ["Η ιστορία αρχίζει με τη βροχή.", "The story starts with the rain."],
+   ["Η βροχή πέφτει στα βουνά και στις πέτρες.", "Rain falls on the mountains and on the rocks."],
+   ["Λίγο λίγο, το νερό «τρώει» τις πέτρες και παίρνει μαζί του λίγο αλάτι.", "Little by little, the water \"eats\" the rocks and takes a little salt with it."],
+   ["Μετά το νερό πηγαίνει στα ποτάμια, και τα ποτάμια το φέρνουν στη θάλασσα.", "Then the water goes into the rivers, and the rivers bring it to the sea."],
+   ["Το αλάτι στο νερό του ποταμού είναι πολύ λίγο, γι' αυτό δεν το καταλαβαίνουμε όταν το πίνουμε.", "There is very little salt in river water, so we don't notice it when we drink it."]
+  ],
+  [
+   ["Στη θάλασσα όμως συμβαίνει κάτι σημαντικό.", "But in the sea something important happens."],
+   ["Ο ήλιος ζεσταίνει το νερό, και το νερό εξατμίζεται: γίνεται ατμός και ανεβαίνει στον ουρανό.", "The sun warms the water, and the water evaporates: it turns into vapour and rises into the sky."],
+   ["Το αλάτι δεν ανεβαίνει μαζί του. Μένει στη θάλασσα.", "The salt doesn't rise with it. It stays in the sea."],
+   ["Ο ατμός γίνεται σύννεφα, τα σύννεφα φέρνουν πάλι βροχή, και η ιστορία ξαναρχίζει.", "The vapour becomes clouds, the clouds bring rain again, and the story starts over."],
+   ["Αυτό γίνεται εδώ και εκατομμύρια χρόνια.", "This has been going on for millions of years."],
+   ["Έτσι, λίγο λίγο, η θάλασσα έγινε αλμυρή.", "That is how, little by little, the sea became salty."]
+  ],
+  [
+   ["Μπορείς να το δεις και στο σπίτι.", "You can see this at home too."],
+   ["Βάλε ένα κουτάλι αλάτι σε ένα ποτήρι νερό και ανακάτεψέ το.", "Put a spoonful of salt in a glass of water and stir it."],
+   ["Ρίξε το νερό σε ένα πιάτο και άφησέ το στον ήλιο για μερικές μέρες.", "Pour the water onto a plate and leave it in the sun for a few days."],
+   ["Το νερό θα φύγει, αλλά το αλάτι θα μείνει στο πιάτο.", "The water will go, but the salt will stay on the plate."],
+   ["Έτσι ακριβώς φτιάχνουν το θαλασσινό αλάτι στις αλυκές.", "This is exactly how sea salt is made in salt pans."],
+   ["Στην Ελλάδα υπάρχουν μεγάλες αλυκές, για παράδειγμα στο Μεσολόγγι.", "There are large salt pans in Greece, for example at Mesolongi."]
+  ],
+  [
+   ["Δεν είναι όλες οι θάλασσες το ίδιο αλμυρές.", "Not all seas are equally salty."],
+   ["Η Μεσόγειος είναι πιο αλμυρή από τον Ατλαντικό ωκεανό, γιατί εδώ ο ήλιος είναι δυνατός και το νερό εξατμίζεται γρήγορα.", "The Mediterranean is saltier than the Atlantic Ocean, because here the sun is strong and the water evaporates quickly."],
+   ["Και η Νεκρά Θάλασσα είναι τόσο αλμυρή που δεν μπορείς να βουλιάξεις.", "And the Dead Sea is so salty that you can't sink."],
+   ["Μπορείς να ξαπλώσεις πάνω στο νερό και να διαβάζεις εφημερίδα!", "You can lie on the water and read a newspaper!"]
+  ]
+ ],
+ "notes": [
+  {"form": "αλμυρό", "lemma": "αλμυρός", "gloss": "salty"},
+  {"form": "κατά λάθος", "lemma": "κατά λάθος", "gloss": "by mistake"},
+  {"form": "εξατμίζεται", "lemma": "εξατμίζομαι", "gloss": "evaporates"},
+  {"form": "ατμός", "lemma": "ατμός", "gloss": "vapour, steam"},
+  {"form": "ξαναρχίζει", "lemma": "ξαναρχίζω", "gloss": "starts again", "note": "ξανα- in front of a verb means \"again\": ξαναλέω, ξαναβλέπω."},
+  {"form": "εκατομμύρια", "lemma": "εκατομμύριο", "gloss": "million"},
+  {"form": "ανακάτεψέ το", "lemma": "ανακατεύω", "gloss": "stir it", "note": "Imperative + pronoun. The extra accent appears because the pronoun is added to a word stressed on the third-last syllable."},
+  {"form": "θαλασσινό", "lemma": "θαλασσινός", "gloss": "of the sea, sea (adj.)"},
+  {"form": "αλυκές", "lemma": "αλυκή", "gloss": "salt pan, saltworks"},
+  {"form": "ωκεανό", "lemma": "ωκεανός", "gloss": "ocean"},
+  {"form": "βουλιάξεις", "lemma": "βουλιάζω", "gloss": "to sink"},
+  {"form": "ξαπλώσεις", "lemma": "ξαπλώνω", "gloss": "to lie down"}
+ ],
+ "questions": [
+  {"q": "Από πού έρχεται το αλάτι της θάλασσας;", "q_en": "Where does the salt in the sea come from?", "options": ["Από τις πέτρες, με τη βροχή και τα ποτάμια.", "Από τα ψάρια.", "Από τα σύννεφα."], "answer": 0},
+  {"q": "Τι γίνεται όταν το νερό της θάλασσας εξατμίζεται;", "q_en": "What happens when sea water evaporates?", "options": ["Το αλάτι ανεβαίνει στον ουρανό.", "Το αλάτι μένει στη θάλασσα.", "Το νερό γίνεται γλυκό."], "answer": 1},
+  {"q": "Πού φτιάχνουν θαλασσινό αλάτι;", "q_en": "Where is sea salt made?", "options": ["Στα ποτάμια.", "Στις λίμνες.", "Στις αλυκές."], "answer": 2},
+  {"q": "Γιατί η Μεσόγειος είναι πιο αλμυρή από τον Ατλαντικό;", "q_en": "Why is the Mediterranean saltier than the Atlantic?", "options": ["Γιατί έχει πολλά ψάρια.", "Γιατί το νερό εξατμίζεται γρήγορα.", "Γιατί είναι πολύ βαθιά."], "answer": 1}
+ ]
+}

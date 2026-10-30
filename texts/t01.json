@@ -1,0 +1,67 @@
+{
+ "id": "t01",
+ "series": "true",
+ "chapter": 1,
+ "title": "Ο Ερατοσθένης μετράει τη Γη",
+ "title_en": "Eratosthenes measures the Earth",
+ "level": "A2+",
+ "theme": "history",
+ "summary_en": "How a librarian in Alexandria worked out the size of the Earth about 2,200 years ago, using a well, a stick and a shadow.",
+ "paragraphs": [
+  [
+   ["Πριν από περίπου 2.200 χρόνια, στην Αλεξάνδρεια της Αιγύπτου, ζούσε ένας Έλληνας σοφός.", "About 2,200 years ago, in Alexandria in Egypt, there lived a Greek scholar."],
+   ["Τον έλεγαν Ερατοσθένη.", "His name was Eratosthenes."],
+   ["Ήταν ο διευθυντής της μεγάλης Βιβλιοθήκης, της μεγαλύτερης βιβλιοθήκης του κόσμου εκείνη την εποχή.", "He was the director of the great Library, the biggest library in the world at that time."],
+   ["Του άρεσαν όλα: τα μαθηματικά, η γεωγραφία, η ιστορία, ακόμα και η ποίηση.", "He liked everything: mathematics, geography, history, even poetry."]
+  ],
+  [
+   ["Οι Έλληνες σοφοί ήξεραν ήδη ότι η Γη είναι στρογγυλή.", "Greek scholars already knew that the Earth is round."],
+   ["Κανείς όμως δεν ήξερε πόσο μεγάλη είναι.", "But nobody knew how big it is."],
+   ["Ο Ερατοσθένης ήθελε να το μάθει, χωρίς να φύγει από την πόλη του.", "Eratosthenes wanted to find out, without leaving his city."]
+  ],
+  [
+   ["Μια μέρα διάβασε κάτι παράξενο.", "One day he read something strange."],
+   ["Στη Συήνη, μια πόλη πιο νότια στην Αίγυπτο, υπήρχε ένα βαθύ πηγάδι.", "In Syene, a city further south in Egypt, there was a deep well."],
+   ["Τη μεγαλύτερη μέρα του χρόνου, στις δώδεκα το μεσημέρι, ο ήλιος έφτανε μέχρι τον πάτο του πηγαδιού.", "On the longest day of the year, at twelve noon, the sun reached all the way to the bottom of the well."],
+   ["Ο ήλιος ήταν ακριβώς από πάνω, και τα πράγματα δεν είχαν σχεδόν καθόλου σκιά.", "The sun was directly overhead, and things had almost no shadow at all."]
+  ],
+  [
+   ["Την ίδια μέρα, στις δώδεκα το μεσημέρι, ο Ερατοσθένης έβαλε ένα ξύλο όρθιο στο έδαφος της Αλεξάνδρειας.", "On the same day, at twelve noon, Eratosthenes stood a stick upright in the ground in Alexandria."],
+   ["Το ξύλο είχε σκιά, μικρή αλλά καθαρή.", "The stick had a shadow, small but clear."],
+   ["Γιατί σκιά εδώ και όχι εκεί;", "Why a shadow here and not there?"],
+   ["Επειδή η Γη είναι στρογγυλή, και ο ήλιος πέφτει με άλλη γωνία σε κάθε πόλη.", "Because the Earth is round, and the sun falls at a different angle in each city."]
+  ],
+  [
+   ["Ο Ερατοσθένης μέτρησε τη γωνία της σκιάς.", "Eratosthenes measured the angle of the shadow."],
+   ["Αν κόψεις έναν κύκλο σε πενήντα ίσα κομμάτια, η γωνία ήταν περίπου ένα κομμάτι.", "If you cut a circle into fifty equal pieces, the angle was about one piece."],
+   ["Ήξερε επίσης την απόσταση ανάμεσα στις δύο πόλεις: περίπου 5.000 στάδια.", "He also knew the distance between the two cities: about 5,000 stadia."],
+   ["Άρα ο γύρος της Γης ήταν πενήντα φορές μεγαλύτερος, δηλαδή 250.000 στάδια.", "So the distance around the Earth was fifty times bigger, that is 250,000 stadia."]
+  ],
+  [
+   ["Σήμερα δεν ξέρουμε ακριβώς πόσο μακρύ ήταν ένα στάδιο.", "Today we don't know exactly how long one stadion was."],
+   ["Όμως ο αριθμός του Ερατοσθένη είναι αρκετά κοντά στον πραγματικό: περίπου 40.000 χιλιόμετρα.", "But Eratosthenes' number is quite close to the real one: about 40,000 kilometres."],
+   ["Δεν ταξίδεψε γύρω από τον κόσμο και δεν είχε κανένα μηχάνημα.", "He didn't travel around the world and he had no machines."],
+   ["Χρειάστηκε μόνο ένα πηγάδι, ένα ξύλο και το μυαλό του.", "All he needed was a well, a stick and his mind."]
+  ]
+ ],
+ "notes": [
+  {"form": "σοφός", "lemma": "σοφός", "gloss": "wise man, scholar", "note": "Also an adjective: wise."},
+  {"form": "διευθυντής", "lemma": "διευθυντής", "gloss": "director, head", "note": "ο διευθυντής, η διευθύντρια"},
+  {"form": "πηγάδι", "lemma": "πηγάδι", "gloss": "well (for water)", "note": "το πηγάδι"},
+  {"form": "πάτο", "lemma": "πάτος", "gloss": "bottom (of a well, glass, sea)"},
+  {"form": "σκιά", "lemma": "σκιά", "gloss": "shadow; shade", "note": "Κάθομαι στη σκιά = I sit in the shade."},
+  {"form": "όρθιο", "lemma": "όρθιος", "gloss": "upright, standing"},
+  {"form": "έδαφος", "lemma": "έδαφος", "gloss": "ground", "note": "το έδαφος, του εδάφους"},
+  {"form": "γωνία", "lemma": "γωνία", "gloss": "angle; corner"},
+  {"form": "απόσταση", "lemma": "απόσταση", "gloss": "distance"},
+  {"form": "στάδια", "lemma": "στάδιο", "gloss": "stadia (an ancient unit of length); stadium", "note": "Today το στάδιο means a sports stadium."},
+  {"form": "ο γύρος της Γης", "lemma": "γύρος", "gloss": "the distance around the Earth", "note": "ο γύρος = a lap, a turn, a round; also the gyros you eat."},
+  {"form": "μηχάνημα", "lemma": "μηχάνημα", "gloss": "machine, device"}
+ ],
+ "questions": [
+  {"q": "Πού δούλευε ο Ερατοσθένης;", "q_en": "Where did Eratosthenes work?", "options": ["Σε ένα σχολείο στην Αθήνα.", "Στη μεγάλη Βιβλιοθήκη της Αλεξάνδρειας.", "Σε ένα πλοίο."], "answer": 1},
+  {"q": "Τι γινόταν στη Συήνη τη μεγαλύτερη μέρα του χρόνου;", "q_en": "What happened in Syene on the longest day of the year?", "options": ["Ο ήλιος έφτανε μέχρι τον πάτο του πηγαδιού.", "Έβρεχε όλη τη μέρα.", "Το πηγάδι γέμιζε νερό."], "answer": 0},
+  {"q": "Τι έβαλε ο Ερατοσθένης στο έδαφος;", "q_en": "What did Eratosthenes put in the ground?", "options": ["Ένα βιβλίο.", "Ένα ποτήρι νερό.", "Ένα ξύλο."], "answer": 2},
+  {"q": "Πόσο κοντά στην αλήθεια ήταν ο αριθμός του;", "q_en": "How close to the truth was his number?", "options": ["Ήταν εντελώς λάθος.", "Ήταν αρκετά κοντά.", "Ήταν δέκα φορές μικρότερος."], "answer": 1}
+ ]
+}

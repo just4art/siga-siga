@@ -1,0 +1,223 @@
+{
+ "id": "s01",
+ "series": "story",
+ "chapter": 1,
+ "title": "Ένα καινούριο σπίτι",
+ "title_en": "A new home",
+ "level": "A2",
+ "theme": "house",
+ "summary_en": "Alex arrives in Thessaloniki, views a small flat in Ano Poli with the talkative landlord, and signs the contract.",
+ "paragraphs": [
+  [
+   [
+    "Με λένε Άλεξ και είμαι τριάντα τεσσάρων χρονών.",
+    "My name is Alex and I'm thirty-four."
+   ],
+   [
+    "Είμαι αναλυτής δεδομένων και δουλεύω από το σπίτι, με τον υπολογιστή μου.",
+    "I'm a data analyst and I work from home, on my computer."
+   ],
+   [
+    "Τον Σεπτέμβριο ήρθα στη Θεσσαλονίκη για έναν χρόνο.",
+    "In September I came to Thessaloniki for a year."
+   ],
+   [
+    "Πρώτα όμως χρειάζομαι ένα σπίτι!",
+    "But first I need a home!"
+   ]
+  ],
+  [
+   [
+    "Ο κύριος Στέλιος, ο ιδιοκτήτης, με περίμενε μπροστά σε μια παλιά πολυκατοικία στην Άνω Πόλη.",
+    "Mr Stelios, the landlord, was waiting for me in front of an old apartment building in Ano Poli."
+   ],
+   [
+    "Είναι περίπου εξήντα χρονών και μιλάει πολύ.",
+    "He's about sixty and he talks a lot."
+   ]
+  ],
+  [
+   [
+    "— Καλώς ήρθατε! Το διαμέρισμα είναι στον δεύτερο όροφο. Δυστυχώς, δεν έχουμε ασανσέρ!",
+    "— Welcome! The flat is on the second floor. Unfortunately, we don't have a lift!"
+   ]
+  ],
+  [
+   [
+    "Το διαμέρισμα είναι μικρό αλλά φωτεινό.",
+    "The flat is small but bright."
+   ],
+   [
+    "Έχει ένα υπνοδωμάτιο, ένα σαλόνι με κουζίνα και ένα μπάνιο.",
+    "It has a bedroom, a living room with a kitchen, and a bathroom."
+   ],
+   [
+    "Τα έπιπλα είναι παλιά: ένα κρεβάτι, ένας καναπές, ένα τραπέζι και δύο καρέκλες.",
+    "The furniture is old: a bed, a sofa, a table and two chairs."
+   ],
+   [
+    "Μετά ο κύριος Στέλιος άνοιξε την πόρτα του μπαλκονιού.",
+    "Then Mr Stelios opened the balcony door."
+   ],
+   [
+    "Από εκεί είδα τη θάλασσα και, μακριά, τον Λευκό Πύργο!",
+    "From there I saw the sea and, far away, the White Tower!"
+   ]
+  ],
+  [
+   [
+    "— Ωραία θέα, ε;",
+    "— Nice view, eh?"
+   ]
+  ],
+  [
+   [
+    "— Πολύ ωραία! Και η θέρμανση;",
+    "— Very nice! And the heating?"
+   ]
+  ],
+  [
+   [
+    "— Έχει κλιματιστικό. Εδώ ο χειμώνας δεν είναι πολύ κρύος... συνήθως.",
+    "— There's air conditioning. The winter here isn't very cold... usually."
+   ]
+  ],
+  [
+   [
+    "— Πόσο είναι το ενοίκιο;",
+    "— How much is the rent?"
+   ]
+  ],
+  [
+   [
+    "— Τετρακόσια πενήντα ευρώ τον μήνα. Και θέλω ένα ενοίκιο για εγγύηση.",
+    "— Four hundred and fifty euros a month. And I want one month's rent as a deposit."
+   ]
+  ],
+  [
+   [
+    "Σκέφτηκα λίγο.",
+    "I thought for a moment."
+   ],
+   [
+    "Το σπίτι είναι μικρό, αλλά η θέα είναι υπέροχη.",
+    "The flat is small, but the view is wonderful."
+   ]
+  ],
+  [
+   [
+    "— Εντάξει, το παίρνω!",
+    "— OK, I'll take it!"
+   ]
+  ],
+  [
+   [
+    "Την ίδια μέρα υπογράψαμε το συμβόλαιο.",
+    "That same day we signed the contract."
+   ],
+   [
+    "Ο κύριος Στέλιος μού έδωσε τα κλειδιά και μου μίλησε για τον καιρό, για τα παιδιά του και για την ομάδα του, τον ΠΑΟΚ.",
+    "Mr Stelios gave me the keys and told me about the weather, his children and his team, PAOK."
+   ],
+   [
+    "Έφυγε μετά από δύο ώρες.",
+    "He left two hours later."
+   ],
+   [
+    "Τώρα έχω σπίτι στη Θεσσαλονίκη!",
+    "Now I have a home in Thessaloniki!"
+   ]
+  ]
+ ],
+ "notes": [
+  {
+   "form": "ιδιοκτήτης",
+   "lemma": "ιδιοκτήτης",
+   "gloss": "owner, landlord",
+   "note": "ο ιδιοκτήτης / η ιδιοκτήτρια"
+  },
+  {
+   "form": "πολυκατοικία",
+   "lemma": "πολυκατοικία",
+   "gloss": "apartment building",
+   "note": "πολυ- (many) + κατοικία (dwelling)"
+  },
+  {
+   "form": "διαμέρισμα",
+   "lemma": "διαμέρισμα",
+   "gloss": "flat, apartment",
+   "note": "το διαμέρισμα, plural τα διαμερίσματα"
+  },
+  {
+   "form": "εγγύηση",
+   "lemma": "εγγύηση",
+   "gloss": "deposit; guarantee",
+   "note": "«ένα ενοίκιο για εγγύηση» = one month's rent as a deposit"
+  },
+  {
+   "form": "υπογράψαμε",
+   "lemma": "υπογράφω",
+   "gloss": "we signed",
+   "note": "aorist: υπέγραψα, υπέγραψες, υπέγραψε, υπογράψαμε (the augment ε- disappears when the stress moves)"
+  },
+  {
+   "form": "συμβόλαιο",
+   "lemma": "συμβόλαιο",
+   "gloss": "contract"
+  },
+  {
+   "form": "είδα",
+   "lemma": "βλέπω",
+   "gloss": "I saw",
+   "note": "irregular aorist of βλέπω"
+  },
+  {
+   "form": "έδωσε",
+   "lemma": "δίνω",
+   "gloss": "he gave",
+   "note": "aorist of δίνω: έδωσα, έδωσες, έδωσε"
+  }
+ ],
+ "questions": [
+  {
+   "q": "Σε ποιον όροφο είναι το διαμέρισμα;",
+   "q_en": "Which floor is the flat on?",
+   "options": [
+    "Στον πρώτο όροφο.",
+    "Στον δεύτερο όροφο.",
+    "Στον τρίτο όροφο."
+   ],
+   "answer": 1
+  },
+  {
+   "q": "Πόσο είναι το ενοίκιο;",
+   "q_en": "How much is the rent?",
+   "options": [
+    "Τετρακόσια ευρώ τον μήνα.",
+    "Πεντακόσια ευρώ τον μήνα.",
+    "Τετρακόσια πενήντα ευρώ τον μήνα."
+   ],
+   "answer": 2
+  },
+  {
+   "q": "Τι βλέπει ο Άλεξ από το μπαλκόνι;",
+   "q_en": "What does Alex see from the balcony?",
+   "options": [
+    "Τη θάλασσα και τον Λευκό Πύργο.",
+    "Ένα μεγάλο πάρκο.",
+    "Το αεροδρόμιο."
+   ],
+   "answer": 0
+  },
+  {
+   "q": "Τι κάνει ο κύριος Στέλιος μετά το συμβόλαιο;",
+   "q_en": "What does Mr Stelios do after the contract?",
+   "options": [
+    "Φεύγει αμέσως.",
+    "Μιλάει δύο ώρες.",
+    "Πίνει καφέ στο μπαλκόνι."
+   ],
+   "answer": 1
+  }
+ ]
+}

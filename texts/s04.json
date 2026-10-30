@@ -1,0 +1,229 @@
+{
+ "id": "s04",
+ "series": "story",
+ "chapter": 4,
+ "title": "Στον γιατρό",
+ "title_en": "At the doctor's",
+ "level": "A2",
+ "theme": "health",
+ "summary_en": "Alex gets the flu in November; Mrs Eleni brings chicken soup, the pharmacist gives him syrup, and Dr Papadopoulou orders three days in bed.",
+ "paragraphs": [
+  [
+   [
+    "Στις αρχές Οκτωβρίου ο καιρός άλλαξε.",
+    "At the start of October the weather changed."
+   ],
+   [
+    "Έβρεχε κάθε μέρα και φυσούσε πολύ.",
+    "It rained every day and it was very windy."
+   ],
+   [
+    "Μια Τρίτη ξύπνησα και ένιωσα χάλια.",
+    "One Tuesday I woke up and felt awful."
+   ],
+   [
+    "Πονούσε ο λαιμός μου, είχα βήχα και το κεφάλι μου ήταν βαρύ.",
+    "My throat hurt, I had a cough and my head felt heavy."
+   ],
+   [
+    "Μέτρησα τον πυρετό: τριάντα οκτώ και πέντε.",
+    "I took my temperature: thirty-eight point five."
+   ]
+  ],
+  [
+   [
+    "Το μεσημέρι κάποιος χτύπησε την πόρτα.",
+    "At midday someone knocked on the door."
+   ],
+   [
+    "Ήταν η κυρία Ελένη με μια κατσαρόλα.",
+    "It was Mrs Eleni with a pot."
+   ]
+  ],
+  [
+   [
+    "— Σε άκουσα να βήχεις όλη τη νύχτα! Πάρε, κοτόσουπα. Είναι το καλύτερο φάρμακο.",
+    "— I heard you coughing all night! Here, chicken soup. It's the best medicine."
+   ]
+  ],
+  [
+   [
+    "Η σούπα ήταν πολύ νόστιμη, αλλά ο πυρετός δεν έπεσε.",
+    "The soup was delicious, but the fever didn't go down."
+   ],
+   [
+    "Το απόγευμα πήγα στο φαρμακείο.",
+    "In the afternoon I went to the pharmacy."
+   ],
+   [
+    "Ο φαρμακοποιός μού έδωσε ένα σιρόπι για τον βήχα και μου είπε: «Αν έχεις πυρετό και αύριο, πήγαινε στον γιατρό.»",
+    "The pharmacist gave me a cough syrup and told me: \"If you still have a fever tomorrow, go to the doctor.\""
+   ]
+  ],
+  [
+   [
+    "Την επόμενη μέρα είχα ακόμα πυρετό.",
+    "The next day I still had a fever."
+   ],
+   [
+    "Έκλεισα ραντεβού με τη γιατρό, την κυρία Παπαδοπούλου.",
+    "I made an appointment with the doctor, Dr Papadopoulou."
+   ]
+  ],
+  [
+   [
+    "— Τι έχετε;",
+    "— What's the matter?"
+   ]
+  ],
+  [
+   [
+    "— Έχω πυρετό και βήχα, και πονάει ο λαιμός μου.",
+    "— I have a fever and a cough, and my throat hurts."
+   ]
+  ],
+  [
+   [
+    "— Από πότε;",
+    "— Since when?"
+   ]
+  ],
+  [
+   [
+    "— Από την Τρίτη.",
+    "— Since Tuesday."
+   ]
+  ],
+  [
+   [
+    "Η γιατρός με εξέτασε και άκουσε τα πνευμόνια μου.",
+    "The doctor examined me and listened to my lungs."
+   ]
+  ],
+  [
+   [
+    "— Έχετε γρίπη. Δεν είναι κάτι σοβαρό. Θα σας γράψω ένα φάρμακο. Θα παίρνετε ένα χάπι τρεις φορές την ημέρα, μετά το φαγητό.",
+    "— You have the flu. It's nothing serious. I'll prescribe you a medicine. Take one pill three times a day, after meals."
+   ]
+  ],
+  [
+   [
+    "— Μπορώ να δουλέψω;",
+    "— Can I work?"
+   ]
+  ],
+  [
+   [
+    "— Όχι! Μείνετε στο κρεβάτι τρεις μέρες και να πίνετε πολλά υγρά.",
+    "— No! Stay in bed for three days and drink plenty of fluids."
+   ]
+  ],
+  [
+   [
+    "Μου έδωσε τη συνταγή και γύρισα στο σπίτι.",
+    "She gave me the prescription and I went back home."
+   ],
+   [
+    "Τρεις μέρες έμεινα στο κρεβάτι με τσάι, χάπια και τη σούπα της κυρίας Ελένης.",
+    "For three days I stayed in bed with tea, pills and Mrs Eleni's soup."
+   ],
+   [
+    "Την Παρασκευή ήμουν καλά.",
+    "By Friday I was fine."
+   ],
+   [
+    "Η κυρία Ελένη λέει ότι με έκανε καλά η σούπα, όχι τα χάπια.",
+    "Mrs Eleni says it was the soup that made me better, not the pills."
+   ]
+  ]
+ ],
+ "notes": [
+  {
+   "form": "ένιωσα χάλια",
+   "lemma": "νιώθω",
+   "gloss": "I felt awful",
+   "note": "νιώθω → aorist ένιωσα; χάλια = awful (doesn't change form)"
+  },
+  {
+   "form": "Πονούσε",
+   "lemma": "πονάω",
+   "gloss": "was hurting",
+   "note": "πονάει ο λαιμός μου = my throat hurts (the body part is the subject)"
+  },
+  {
+   "form": "κατσαρόλα",
+   "lemma": "κατσαρόλα",
+   "gloss": "cooking pot, saucepan"
+  },
+  {
+   "form": "κοτόσουπα",
+   "lemma": "κοτόσουπα",
+   "gloss": "chicken soup",
+   "note": "κότα (hen) + σούπα"
+  },
+  {
+   "form": "έπεσε",
+   "lemma": "πέφτω",
+   "gloss": "fell, went down",
+   "note": "aorist of πέφτω: έπεσα, έπεσες, έπεσε"
+  },
+  {
+   "form": "Έκλεισα ραντεβού",
+   "lemma": "κλείνω ραντεβού",
+   "gloss": "I made an appointment",
+   "note": "literally 'I closed an appointment'"
+  },
+  {
+   "form": "εξέτασε",
+   "lemma": "εξετάζω",
+   "gloss": "examined"
+  },
+  {
+   "form": "υγρά",
+   "lemma": "υγρό",
+   "gloss": "fluids, liquids"
+  }
+ ],
+ "questions": [
+  {
+   "q": "Πόσο πυρετό είχε ο Άλεξ την Τρίτη;",
+   "q_en": "How high was Alex's fever on Tuesday?",
+   "options": [
+    "37,5",
+    "39",
+    "38,5"
+   ],
+   "answer": 2
+  },
+  {
+   "q": "Τι έφερε η κυρία Ελένη;",
+   "q_en": "What did Mrs Eleni bring?",
+   "options": [
+    "Κοτόσουπα.",
+    "Ένα σιρόπι.",
+    "Μπουγάτσα."
+   ],
+   "answer": 0
+  },
+  {
+   "q": "Τι είπε η γιατρός;",
+   "q_en": "What did the doctor say?",
+   "options": [
+    "Ότι είναι κάτι σοβαρό.",
+    "Ότι έχει γρίπη.",
+    "Ότι μπορεί να δουλέψει."
+   ],
+   "answer": 1
+  },
+  {
+   "q": "Τι πιστεύει η κυρία Ελένη;",
+   "q_en": "What does Mrs Eleni believe?",
+   "options": [
+    "Ότι τα χάπια τον έκαναν καλά.",
+    "Ότι η σούπα τον έκανε καλά.",
+    "Ότι πρέπει να πάει στο νοσοκομείο."
+   ],
+   "answer": 1
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "id": "t02",
+ "series": "true",
+ "chapter": 2,
+ "title": "Ο πρώτος μαραθώνιος",
+ "title_en": "The first marathon",
+ "level": "A2+",
+ "theme": "history",
+ "summary_en": "The legend of the runner from Marathon, what the ancient historian Herodotus actually wrote, and how a water carrier from Marousi won the first modern marathon in 1896.",
+ "paragraphs": [
+  [
+   ["Το 490 π.Χ. ένας μεγάλος στρατός από την Περσία ήρθε στην Ελλάδα.", "In 490 BC a large army from Persia came to Greece."],
+   ["Τα πλοία του σταμάτησαν στον Μαραθώνα, μια παραλία κοντά στην Αθήνα.", "Its ships stopped at Marathon, a beach near Athens."],
+   ["Οι Αθηναίοι ήταν πολύ λιγότεροι, αλλά πολέμησαν με θάρρος και νίκησαν.", "The Athenians were far fewer, but they fought bravely and won."]
+  ],
+  [
+   ["Για αυτή τη μέρα υπάρχει ένας πολύ γνωστός θρύλος.", "There is a very well-known legend about this day."],
+   ["Λένε ότι ένας στρατιώτης, ο Φειδιππίδης, έτρεξε από τον Μαραθώνα μέχρι την Αθήνα για να φέρει τα καλά νέα.", "They say that a soldier, Pheidippides, ran from Marathon to Athens to bring the good news."],
+   ["Ήταν περίπου σαράντα χιλιόμετρα.", "It was about forty kilometres."],
+   ["Όταν έφτασε, φώναξε «Νενικήκαμεν!», δηλαδή «Νικήσαμε!».", "When he arrived, he shouted \"Nenikēkamen!\", which means \"We won!\"."],
+   ["Μετά έπεσε κάτω και πέθανε από την κούραση.", "Then he fell to the ground and died of exhaustion."]
+  ],
+  [
+   ["Είναι αλήθεια; Μάλλον όχι ακριβώς.", "Is it true? Probably not exactly."],
+   ["Ο αρχαίος ιστορικός Ηρόδοτος γράφει για τον Φειδιππίδη, αλλά για άλλο τρέξιμο: πριν από τη μάχη, έτρεξε στη Σπάρτη για να ζητήσει βοήθεια.", "The ancient historian Herodotus writes about Pheidippides, but about a different run: before the battle, he ran to Sparta to ask for help."],
+   ["Η ιστορία με το τρέξιμο ως την Αθήνα γράφτηκε πολλά χρόνια αργότερα.", "The story about the run to Athens was written many years later."],
+   ["Όμως είναι τόσο ωραία ιστορία που όλοι τη θυμούνται.", "But it is such a good story that everyone remembers it."]
+  ],
+  [
+   ["Το 1896 έγιναν στην Αθήνα οι πρώτοι σύγχρονοι Ολυμπιακοί Αγώνες.", "In 1896 the first modern Olympic Games took place in Athens."],
+   ["Ένας Γάλλος, ο Μισέλ Μπρεάλ, είχε μια ιδέα: έναν αγώνα δρόμου από τον Μαραθώνα ως την Αθήνα, όπως στον θρύλο.", "A Frenchman, Michel Bréal, had an idea: a running race from Marathon to Athens, like in the legend."],
+   ["Έτσι γεννήθηκε ο μαραθώνιος.", "That is how the marathon was born."]
+  ],
+  [
+   ["Οι Έλληνες ήθελαν πολύ να κερδίσει ένας Έλληνας.", "The Greeks really wanted a Greek to win."],
+   ["Στον αγώνα έτρεξε και ο Σπύρος Λούης, ένας νεαρός νερουλάς από το Μαρούσι.", "Among the runners was Spyros Louis, a young water carrier from Marousi."],
+   ["Η δουλειά του ήταν να μεταφέρει νερό στην Αθήνα.", "His job was to carry water to Athens."],
+   ["Στην αρχή έτρεχε πίσω από τους άλλους, αλλά σιγά σιγά τους πέρασε έναν έναν.", "At first he ran behind the others, but little by little he passed them one by one."],
+   ["Όταν μπήκε πρώτος στο Παναθηναϊκό Στάδιο, ο κόσμος τρελάθηκε από τη χαρά.", "When he entered the Panathenaic Stadium in first place, the crowd went wild with joy."],
+   ["Δύο γιοι του βασιλιά κατέβηκαν και έτρεξαν δίπλα του μέχρι το τέλος.", "Two of the king's sons came down and ran beside him to the finish."]
+  ],
+  [
+   ["Σήμερα ο μαραθώνιος έχει 42 χιλιόμετρα και 195 μέτρα.", "Today the marathon is 42 kilometres and 195 metres long."],
+   ["Κάθε Νοέμβριο χιλιάδες δρομείς τρέχουν τη διαδρομή από τον Μαραθώνα ως το Καλλιμάρμαρο, όπως ο Λούης.", "Every November thousands of runners run the route from Marathon to the Kallimarmaro, like Louis."],
+   ["Και όταν κάποιος λέει «ήταν σκέτος μαραθώνιος», εννοεί κάτι πολύ μεγάλο και κουραστικό.", "And when someone says \"it was a real marathon\", they mean something very long and tiring."]
+  ]
+ ],
+ "notes": [
+  {"form": "στρατός", "lemma": "στρατός", "gloss": "army"},
+  {"form": "θάρρος", "lemma": "θάρρος", "gloss": "courage", "note": "το θάρρος; «με θάρρος» = bravely."},
+  {"form": "θρύλος", "lemma": "θρύλος", "gloss": "legend"},
+  {"form": "στρατιώτης", "lemma": "στρατιώτης", "gloss": "soldier"},
+  {"form": "κούραση", "lemma": "κούραση", "gloss": "tiredness, exhaustion"},
+  {"form": "τρέξιμο", "lemma": "τρέξιμο", "gloss": "running, a run", "note": "το τρέξιμο, from τρέχω."},
+  {"form": "γράφτηκε", "lemma": "γράφομαι", "gloss": "was written", "note": "Passive past of γράφω."},
+  {"form": "σύγχρονοι", "lemma": "σύγχρονος", "gloss": "modern; contemporary"},
+  {"form": "νερουλάς", "lemma": "νερουλάς", "gloss": "water carrier, water seller", "note": "Old job: he sold drinking water from a cart."},
+  {"form": "τρελάθηκε", "lemma": "τρελαίνομαι", "gloss": "went crazy, went wild"},
+  {"form": "δρομείς", "lemma": "δρομέας", "gloss": "runners", "note": "ο δρομέας, οι δρομείς"},
+  {"form": "σκέτος μαραθώνιος", "lemma": "σκέτος", "gloss": "a real marathon, nothing but a marathon", "note": "σκέτος = plain; in speech also \"pure, real\": σκέτη καταστροφή = a total disaster."}
+ ],
+ "questions": [
+  {"q": "Ποιοι νίκησαν στη μάχη του Μαραθώνα;", "q_en": "Who won the battle of Marathon?", "options": ["Οι Πέρσες.", "Οι Αθηναίοι.", "Οι Σπαρτιάτες."], "answer": 1},
+  {"q": "Κατά τον Ηρόδοτο, πού έτρεξε ο Φειδιππίδης;", "q_en": "According to Herodotus, where did Pheidippides run?", "options": ["Στη Σπάρτη, για να ζητήσει βοήθεια.", "Στην Αθήνα, μετά τη μάχη.", "Στην Περσία."], "answer": 0},
+  {"q": "Τι δουλειά έκανε ο Σπύρος Λούης;", "q_en": "What job did Spyros Louis do?", "options": ["Ήταν στρατιώτης.", "Ήταν δάσκαλος.", "Μετέφερε νερό στην Αθήνα."], "answer": 2},
+  {"q": "Πού τελειώνει ο μαραθώνιος της Αθήνας;", "q_en": "Where does the Athens marathon finish?", "options": ["Στο Μαρούσι.", "Στο Καλλιμάρμαρο.", "Στον Μαραθώνα."], "answer": 1}
+ ]
+}

@@ -1,0 +1,244 @@
+{
+ "id": "s03",
+ "series": "story",
+ "chapter": 3,
+ "title": "Ο αριθμός που δεν είχα",
+ "title_en": "The number I didn't have",
+ "level": "A2",
+ "theme": "public-services",
+ "summary_en": "Alex needs a Greek tax number (AFM): he waits two hours at the tax office, is sent home for a missing document, and finally gets it the next day.",
+ "paragraphs": [
+  [
+   [
+    "Στην Ελλάδα, για όλα χρειάζεσαι ΑΦΜ.",
+    "In Greece you need a tax number (AFM) for everything."
+   ],
+   [
+    "Για το συμβόλαιο, για τη δουλειά, για το ρεύμα, ακόμα και για το κινητό.",
+    "For the contract, for work, for electricity, even for a mobile phone."
+   ],
+   [
+    "Ο κύριος Στέλιος μού είπε: «Πήγαινε στην εφορία. Είναι εύκολο!»",
+    "Mr Stelios told me: \"Go to the tax office. It's easy!\""
+   ]
+  ],
+  [
+   [
+    "Τη Δευτέρα πήγα στην εφορία στις οκτώ το πρωί.",
+    "On Monday I went to the tax office at eight in the morning."
+   ],
+   [
+    "Μπροστά στην πόρτα περίμεναν ήδη είκοσι άνθρωποι.",
+    "Twenty people were already waiting in front of the door."
+   ],
+   [
+    "Πήρα ένα χαρτάκι με αριθμό: εκατόν δεκαεπτά.",
+    "I took a little ticket with a number: one hundred and seventeen."
+   ],
+   [
+    "Στην οθόνη έγραφε: τριάντα δύο.",
+    "The screen said: thirty-two."
+   ]
+  ],
+  [
+   [
+    "Περίμενα δύο ώρες.",
+    "I waited for two hours."
+   ],
+   [
+    "Διάβασα όλες τις ειδήσεις στο κινητό μου και έμαθα πολλές καινούριες λέξεις.",
+    "I read all the news on my phone and learned lots of new words."
+   ],
+   [
+    "Επιτέλους, η οθόνη έγραψε «117» και πήγα στο γκισέ.",
+    "Finally the screen showed \"117\" and I went to the counter."
+   ]
+  ],
+  [
+   [
+    "— Καλημέρα. Θέλω ΑΦΜ, παρακαλώ.",
+    "— Good morning. I'd like a tax number, please."
+   ]
+  ],
+  [
+   [
+    "— Διαβατήριο;",
+    "— Passport?"
+   ]
+  ],
+  [
+   [
+    "— Ορίστε.",
+    "— Here you are."
+   ]
+  ],
+  [
+   [
+    "— Και το συμβόλαιο του σπιτιού;",
+    "— And the rental contract?"
+   ]
+  ],
+  [
+   [
+    "— Το... συμβόλαιο;",
+    "— The... contract?"
+   ]
+  ],
+  [
+   [
+    "Το συμβόλαιο ήταν στο σπίτι, πάνω στο τραπέζι.",
+    "The contract was at home, on the table."
+   ]
+  ],
+  [
+   [
+    "— Χωρίς συμβόλαιο δεν γίνεται. Ελάτε αύριο.",
+    "— Without the contract it's not possible. Come back tomorrow."
+   ]
+  ],
+  [
+   [
+    "Την επόμενη μέρα πήγα ξανά, στις επτά και μισή αυτή τη φορά, με όλα τα χαρτιά σε έναν φάκελο.",
+    "The next day I went again, at half past seven this time, with all my papers in a folder."
+   ],
+   [
+    "Η υπάλληλος με θυμήθηκε και χαμογέλασε.",
+    "The clerk remembered me and smiled."
+   ],
+   [
+    "Σε δέκα λεπτά είχα ΑΦΜ!",
+    "Ten minutes later I had a tax number!"
+   ]
+  ],
+  [
+   [
+    "— Τώρα χρειάζεστε και ΑΜΚΑ, μου είπε.",
+    "— Now you also need an AMKA, she told me."
+   ]
+  ],
+  [
+   [
+    "— Τι είναι το ΑΜΚΑ;",
+    "— What's an AMKA?"
+   ]
+  ],
+  [
+   [
+    "— Είναι ο αριθμός για τον γιατρό και το νοσοκομείο. Πηγαίνετε στο ΚΕΠ.",
+    "— It's the number for the doctor and the hospital. Go to the KEP."
+   ]
+  ],
+  [
+   [
+    "Πήρα τον φάκελό μου και πήγα στο ΚΕΠ.",
+    "I took my folder and went to the KEP."
+   ],
+   [
+    "Ευτυχώς, εκεί δεν είχε ουρά.",
+    "Luckily, there was no queue there."
+   ]
+  ],
+  [
+   [
+    "Το βράδυ ο κύριος Στέλιος με πήρε τηλέφωνο.",
+    "In the evening Mr Stelios called me."
+   ]
+  ],
+  [
+   [
+    "— Λοιπόν; Είδες; Εύκολο!",
+    "— Well? See? Easy!"
+   ]
+  ]
+ ],
+ "notes": [
+  {
+   "form": "ΑΦΜ",
+   "lemma": "ΑΦΜ",
+   "gloss": "tax number",
+   "note": "το ΑΦΜ = Αριθμός Φορολογικού Μητρώου"
+  },
+  {
+   "form": "εφορία",
+   "lemma": "εφορία",
+   "gloss": "tax office"
+  },
+  {
+   "form": "χαρτάκι",
+   "lemma": "χαρτάκι",
+   "gloss": "slip of paper, little ticket",
+   "note": "diminutive of το χαρτί; -άκι makes things small"
+  },
+  {
+   "form": "γκισέ",
+   "lemma": "γκισέ",
+   "gloss": "service counter, window",
+   "note": "το γκισέ, from French guichet; it never changes form"
+  },
+  {
+   "form": "φάκελο",
+   "lemma": "φάκελος",
+   "gloss": "folder; envelope"
+  },
+  {
+   "form": "ΚΕΠ",
+   "lemma": "ΚΕΠ",
+   "gloss": "citizen service centre",
+   "note": "Κέντρο Εξυπηρέτησης Πολιτών"
+  },
+  {
+   "form": "με πήρε τηλέφωνο",
+   "lemma": "παίρνω τηλέφωνο",
+   "gloss": "he called me",
+   "note": "παίρνω (κάποιον) τηλέφωνο = to phone someone; πήρα, πήρες, πήρε"
+  },
+  {
+   "form": "θυμήθηκε",
+   "lemma": "θυμάμαι",
+   "gloss": "(she) remembered",
+   "note": "past of θυμάμαι: θυμήθηκα, θυμήθηκες, θυμήθηκε"
+  }
+ ],
+ "questions": [
+  {
+   "q": "Τι αριθμό είχε το χαρτάκι του Άλεξ;",
+   "q_en": "What number was on Alex's ticket?",
+   "options": [
+    "32",
+    "117",
+    "20"
+   ],
+   "answer": 1
+  },
+  {
+   "q": "Γιατί δεν πήρε ΑΦΜ τη Δευτέρα;",
+   "q_en": "Why didn't he get a tax number on Monday?",
+   "options": [
+    "Γιατί η εφορία ήταν κλειστή.",
+    "Γιατί δεν είχε διαβατήριο.",
+    "Γιατί το συμβόλαιο ήταν στο σπίτι."
+   ],
+   "answer": 2
+  },
+  {
+   "q": "Για τι χρειάζεται το ΑΜΚΑ;",
+   "q_en": "What is the AMKA needed for?",
+   "options": [
+    "Για τον γιατρό και το νοσοκομείο.",
+    "Για το λεωφορείο.",
+    "Για το ενοίκιο."
+   ],
+   "answer": 0
+  },
+  {
+   "q": "Τι βρήκε ο Άλεξ στο ΚΕΠ;",
+   "q_en": "What did Alex find at the KEP?",
+   "options": [
+    "Μια μεγάλη ουρά.",
+    "Τον κύριο Στέλιο.",
+    "Καμία ουρά."
+   ],
+   "answer": 2
+  }
+ ]
+}

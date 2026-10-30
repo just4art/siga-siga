@@ -1,0 +1,194 @@
+{
+ "id": "c01",
+ "series": "culture",
+ "chapter": 1,
+ "title": "Ο ελληνικός καφές",
+ "title_en": "Greek coffee",
+ "level": "A2+",
+ "theme": "culture",
+ "summary_en": "Why \"shall we go for coffee?\" is a social invitation, and the three classic Greek coffees: Greek coffee, frappé and freddo espresso.",
+ "paragraphs": [
+  [
+   [
+    "«Πάμε για καφέ;» Αυτή η ερώτηση ακούγεται κάθε μέρα σε όλη την Ελλάδα.",
+    "\"Shall we go for coffee?\" You hear this question every day all over Greece."
+   ],
+   [
+    "Όμως δεν σημαίνει μόνο «πάμε να πιούμε έναν καφέ».",
+    "But it doesn't only mean \"let's go and drink a coffee\"."
+   ],
+   [
+    "Σημαίνει «πάμε να τα πούμε, να περάσουμε λίγη ώρα μαζί».",
+    "It means \"let's catch up and spend some time together\"."
+   ]
+  ],
+  [
+   [
+    "Ο πιο παλιός καφές είναι ο ελληνικός.",
+    "The oldest coffee is Greek coffee."
+   ],
+   [
+    "Τον φτιάχνουν σε ένα μικρό μπρίκι και τον σερβίρουν σε μικρό φλιτζάνι, πάντα με ένα ποτήρι νερό.",
+    "It is made in a small coffee pot (briki) and served in a small cup, always with a glass of water."
+   ],
+   [
+    "Όταν τον παραγγέλνεις, πρέπει να πεις πώς τον θέλεις: σκέτο, δηλαδή χωρίς ζάχαρη, μέτριο, με λίγη ζάχαρη, ή γλυκό, με αρκετή ζάχαρη.",
+    "When you order it, you have to say how you want it: plain, that is without sugar, medium, with a little sugar, or sweet, with quite a lot of sugar."
+   ],
+   [
+    "Δεν τον πίνεις όλο, γιατί στον πάτο του φλιτζανιού μένει το κατακάθι.",
+    "You don't drink all of it, because the grounds stay at the bottom of the cup."
+   ],
+   [
+    "Παλιά οι γιαγιάδες «διάβαζαν» το φλιτζάνι για να πουν το μέλλον.",
+    "In the old days grandmothers \"read\" the cup to tell the future."
+   ]
+  ],
+  [
+   [
+    "Το 1957, στη Θεσσαλονίκη, γεννήθηκε ο φραπές.",
+    "In 1957, in Thessaloniki, the frappé was born."
+   ],
+   [
+    "Σε μια έκθεση, ένας υπάλληλος της Nestlé ήθελε να πιει στιγμιαίο καφέ, αλλά δεν είχε ζεστό νερό.",
+    "At a trade fair, a Nestlé employee wanted to drink instant coffee, but he had no hot water."
+   ],
+   [
+    "Έτσι, ανακάτεψε τον καφέ με κρύο νερό σε ένα σέικερ, και το νέο ρόφημα άρεσε σε όλους.",
+    "So he mixed the coffee with cold water in a shaker, and everyone liked the new drink."
+   ],
+   [
+    "Σήμερα, το καλοκαίρι, πολλοί Έλληνες προτιμούν τον φρέντο εσπρέσο: εσπρέσο χτυπημένο με πάγο.",
+    "Today, in summer, many Greeks prefer freddo espresso: espresso whipped with ice."
+   ]
+  ],
+  [
+   [
+    "Στην Ελλάδα κανείς δεν πίνει τον καφέ του βιαστικά.",
+    "In Greece nobody drinks their coffee in a hurry."
+   ],
+   [
+    "Οι παρέες κάθονται στις καφετέριες δύο ή τρεις ώρες με έναν μόνο καφέ.",
+    "Groups of friends sit in cafés for two or three hours with just one coffee."
+   ],
+   [
+    "Μιλάνε για τη δουλειά, για την πολιτική, για το ποδόσφαιρο και για τους φίλους που δεν είναι εκεί.",
+    "They talk about work, politics, football and the friends who aren't there."
+   ],
+   [
+    "Ο σερβιτόρος δεν σε διώχνει· αντίθετα, σου φέρνει κι άλλο νερό.",
+    "The waiter doesn't send you away; on the contrary, he brings you more water."
+   ],
+   [
+    "Ο καφές είναι απλώς η αφορμή για κουβέντα.",
+    "The coffee is simply an excuse for a chat."
+   ],
+   [
+    "Λοιπόν, πάμε για καφέ;",
+    "So, shall we go for coffee?"
+   ]
+  ]
+ ],
+ "notes": [
+  {
+   "form": "τα πούμε",
+   "lemma": "λέω",
+   "gloss": "to catch up, have a chat",
+   "note": "«Τα λέμε» = see you; «να τα πούμε» = to catch up."
+  },
+  {
+   "form": "μπρίκι",
+   "lemma": "μπρίκι",
+   "gloss": "small pot for Greek coffee",
+   "note": "το μπρίκι"
+  },
+  {
+   "form": "σκέτο",
+   "lemma": "σκέτος",
+   "gloss": "plain, without sugar",
+   "note": "Also used for drinks without milk or mixers."
+  },
+  {
+   "form": "μέτριο",
+   "lemma": "μέτριος",
+   "gloss": "medium; average",
+   "note": "For coffee: with a little sugar."
+  },
+  {
+   "form": "κατακάθι",
+   "lemma": "κατακάθι",
+   "gloss": "grounds, sediment",
+   "note": "το κατακάθι"
+  },
+  {
+   "form": "γεννήθηκε",
+   "lemma": "γεννιέμαι",
+   "gloss": "was born",
+   "note": "Past tense (αόριστος) of γεννιέμαι."
+  },
+  {
+   "form": "στιγμιαίο",
+   "lemma": "στιγμιαίος",
+   "gloss": "instant"
+  },
+  {
+   "form": "ανακάτεψε",
+   "lemma": "ανακατεύω",
+   "gloss": "mixed, stirred",
+   "note": "-εύω verbs make the past in -εψα."
+  },
+  {
+   "form": "βιαστικά",
+   "lemma": "βιαστικά",
+   "gloss": "in a hurry, hastily"
+  },
+  {
+   "form": "αφορμή",
+   "lemma": "αφορμή",
+   "gloss": "excuse, occasion, reason",
+   "note": "η αφορμή"
+  }
+ ],
+ "questions": [
+  {
+   "q": "Τι σημαίνει συνήθως «Πάμε για καφέ;»;",
+   "q_en": "What does \"Shall we go for coffee?\" usually mean?",
+   "options": [
+    "Πάμε να περάσουμε λίγη ώρα μαζί.",
+    "Πάμε να αγοράσουμε καφέ για το σπίτι.",
+    "Πάμε στο σπίτι μου."
+   ],
+   "answer": 0
+  },
+  {
+   "q": "Πώς είναι ο σκέτος ελληνικός καφές;",
+   "q_en": "What is a plain (sketos) Greek coffee like?",
+   "options": [
+    "Με πολλή ζάχαρη.",
+    "Χωρίς ζάχαρη.",
+    "Με γάλα."
+   ],
+   "answer": 1
+  },
+  {
+   "q": "Πού γεννήθηκε ο φραπές;",
+   "q_en": "Where was the frappé born?",
+   "options": [
+    "Στην Αθήνα.",
+    "Στην Κρήτη.",
+    "Στη Θεσσαλονίκη."
+   ],
+   "answer": 2
+  },
+  {
+   "q": "Τι κάνει ο σερβιτόρος όταν μια παρέα κάθεται πολλές ώρες;",
+   "q_en": "What does the waiter do when a group sits for many hours?",
+   "options": [
+    "Φέρνει κι άλλο νερό.",
+    "Τους ζητάει να φύγουν.",
+    "Φέρνει αμέσως τον λογαριασμό."
+   ],
+   "answer": 0
+  }
+ ]
+}

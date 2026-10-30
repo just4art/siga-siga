@@ -1,0 +1,179 @@
+{
+ "id": "s05",
+ "series": "story",
+ "chapter": 5,
+ "title": "Η ιστορία της κυρίας Ελένης",
+ "title_en": "Mrs Eleni's story",
+ "level": "A2+",
+ "theme": "life-story",
+ "summary_en": "Over coffee, Mrs Eleni tells Alex her life story: a childhood on Lemnos, moving to Thessaloniki at nineteen to work as a seamstress, meeting Giorgos, and her son leaving for Germany.",
+ "paragraphs": [
+  [
+   [
+    "Μια Κυριακή η κυρία Ελένη με κάλεσε για καφέ.",
+    "One Sunday Mrs Eleni invited me over for coffee."
+   ],
+   [
+    "Το σαλόνι της ήταν γεμάτο φωτογραφίες, και το Λουκούμι κοιμόταν στον καναπέ.",
+    "Her living room was full of photographs, and Loukoumi was asleep on the sofa."
+   ],
+   [
+    "Ρώτησα για μια παλιά ασπρόμαυρη φωτογραφία με ένα μικρό σπίτι δίπλα στη θάλασσα.",
+    "I asked about an old black-and-white photo of a small house by the sea."
+   ]
+  ],
+  [
+   [
+    "— Αυτή είναι η Λήμνος, το νησί μου, είπε.",
+    "— That's Lemnos, my island, she said."
+   ]
+  ],
+  [
+   [
+    "— Γεννήθηκα εκεί το 1947. Ήμασταν πέντε παιδιά και ήμασταν φτωχοί, αλλά το καλοκαίρι κολυμπούσαμε όλη μέρα και τρώγαμε σύκα από τα δέντρα. Ο πατέρας μου ήταν ψαράς και η μητέρα μου έραβε ρούχα για όλο το χωριό. Κάθε απόγευμα καθόμουν δίπλα της και την κοίταζα. Έτσι έμαθα να ράβω.",
+    "— I was born there in 1947. There were five of us children and we were poor, but in summer we used to swim all day and eat figs straight from the trees. My father was a fisherman and my mother sewed clothes for the whole village. Every afternoon I used to sit next to her and watch her. That's how I learned to sew."
+   ]
+  ],
+  [
+   [
+    "— Το 1966, όταν ήμουν δεκαεννιά χρονών, ήρθα στη Θεσσαλονίκη. Στο νησί δεν υπήρχε δουλειά. Βρήκα δουλειά ως μοδίστρα σε ένα ραφείο κοντά στην πλατεία Αριστοτέλους. Δούλευα δέκα ώρες την ημέρα, αλλά ήμουν ευτυχισμένη. Τις Κυριακές περπατούσα με τις φίλες μου στην παραλία.",
+    "— In 1966, when I was nineteen, I came to Thessaloniki. There was no work on the island. I found a job as a seamstress in a tailor's shop near Aristotelous Square. I worked ten hours a day, but I was happy. On Sundays I used to walk along the seafront with my friends."
+   ]
+  ],
+  [
+   [
+    "— Και εκεί γνωρίσατε τον άντρα σας;",
+    "— And is that where you met your husband?"
+   ]
+  ],
+  [
+   [
+    "— Ναι! Μια Κυριακή του 1969 γνώρισα τον Γιώργο. Ήταν οδηγός λεωφορείου και είχε πολύ ωραίο χαμόγελο. Κάθε μέρα με περίμενε έξω από το ραφείο με ένα κουλούρι. Παντρευτήκαμε έναν χρόνο αργότερα.",
+    "— Yes! One Sunday in 1969 I met Giorgos. He was a bus driver and he had a lovely smile. Every day he would wait for me outside the tailor's shop with a koulouri. We got married a year later."
+   ]
+  ],
+  [
+   [
+    "— Και μετά;",
+    "— And then?"
+   ]
+  ],
+  [
+   [
+    "— Μετά ήρθε ο γιος μας. Όταν μεγάλωσε, σπούδασε μηχανικός, αλλά εδώ δεν βρήκε δουλειά. Έτσι, πήγε στη Γερμανία, στη Στουτγάρδη. Εκεί γνώρισε τη γυναίκα του και έμεινε. Τώρα έχω και μια εγγονή, τη Δανάη. Με παίρνει τηλέφωνο κάθε Κυριακή και μου μιλάει στα ελληνικά, με γερμανική προφορά!",
+    "— Then our son came along. When he grew up, he studied engineering, but he couldn't find work here. So he went to Germany, to Stuttgart. There he met his wife and stayed. Now I have a granddaughter too, Danai. She calls me every Sunday and speaks Greek to me, with a German accent!"
+   ]
+  ],
+  [
+   [
+    "— Ο Γιώργος πέθανε το 2015.",
+    "— Giorgos died in 2015."
+   ]
+  ],
+  [
+   [
+    "Η κυρία Ελένη κοίταξε τη φωτογραφία για λίγο.",
+    "Mrs Eleni looked at the photo for a moment."
+   ],
+   [
+    "Μετά χαμογέλασε.",
+    "Then she smiled."
+   ]
+  ],
+  [
+   [
+    "— Η ζωή είναι μεγάλη, παιδί μου. Πιες τον καφέ σου, κρυώνει!",
+    "— Life is long, my dear. Drink your coffee, it's getting cold!"
+   ]
+  ]
+ ],
+ "notes": [
+  {
+   "form": "Γεννήθηκα",
+   "lemma": "γεννιέμαι",
+   "gloss": "I was born",
+   "note": "aorist of γεννιέμαι: γεννήθηκα, γεννήθηκες, γεννήθηκε"
+  },
+  {
+   "form": "ψαράς",
+   "lemma": "ψαράς",
+   "gloss": "fisherman"
+  },
+  {
+   "form": "έραβε",
+   "lemma": "ράβω",
+   "gloss": "she used to sew",
+   "note": "imperfect (παρατατικός) for a habit in the past: έραβα, έραβες, έραβε"
+  },
+  {
+   "form": "καθόμουν",
+   "lemma": "κάθομαι",
+   "gloss": "I used to sit",
+   "note": "imperfect of κάθομαι: καθόμουν, καθόσουν, καθόταν"
+  },
+  {
+   "form": "μοδίστρα",
+   "lemma": "μοδίστρα",
+   "gloss": "seamstress, dressmaker"
+  },
+  {
+   "form": "ραφείο",
+   "lemma": "ραφείο",
+   "gloss": "tailor's workshop",
+   "note": "from ράβω (to sew)"
+  },
+  {
+   "form": "Παντρευτήκαμε",
+   "lemma": "παντρεύομαι",
+   "gloss": "we got married",
+   "note": "aorist of παντρεύομαι: παντρεύτηκα, παντρευτήκαμε"
+  },
+  {
+   "form": "προφορά",
+   "lemma": "προφορά",
+   "gloss": "accent, pronunciation"
+  }
+ ],
+ "questions": [
+  {
+   "q": "Πού γεννήθηκε η κυρία Ελένη;",
+   "q_en": "Where was Mrs Eleni born?",
+   "options": [
+    "Στη Θεσσαλονίκη.",
+    "Στη Λήμνο.",
+    "Στη Γερμανία."
+   ],
+   "answer": 1
+  },
+  {
+   "q": "Γιατί ήρθε στη Θεσσαλονίκη;",
+   "q_en": "Why did she come to Thessaloniki?",
+   "options": [
+    "Γιατί στο νησί δεν υπήρχε δουλειά.",
+    "Για να σπουδάσει.",
+    "Για να βρει τον Γιώργο."
+   ],
+   "answer": 0
+  },
+  {
+   "q": "Τι δουλειά έκανε ο Γιώργος;",
+   "q_en": "What was Giorgos's job?",
+   "options": [
+    "Ήταν ψαράς.",
+    "Ήταν μηχανικός.",
+    "Ήταν οδηγός λεωφορείου."
+   ],
+   "answer": 2
+  },
+  {
+   "q": "Πώς μιλάει η Δανάη στα ελληνικά;",
+   "q_en": "How does Danai speak Greek?",
+   "options": [
+    "Με γερμανική προφορά.",
+    "Πολύ αργά.",
+    "Δεν μιλάει ελληνικά."
+   ],
+   "answer": 0
+  }
+ ]
+}

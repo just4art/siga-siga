@@ -1,0 +1,67 @@
+{
+ "id": "w04",
+ "series": "why",
+ "chapter": 4,
+ "title": "Γιατί ο ουρανός είναι γαλάζιος;",
+ "title_en": "Why is the sky blue?",
+ "level": "A2+",
+ "theme": "science",
+ "summary_en": "White light is made of all colours, and air scatters blue light the most. It also explains why sunsets are red and why the sky on the Moon is black.",
+ "paragraphs": [
+  [
+   ["Κοίτα ψηλά μια μέρα χωρίς σύννεφα.", "Look up on a day without clouds."],
+   ["Ο ουρανός είναι γαλάζιος.", "The sky is blue."],
+   ["Όμως το φως του ήλιου είναι λευκό. Από πού έρχεται λοιπόν το γαλάζιο χρώμα;", "But sunlight is white. So where does the blue colour come from?"]
+  ],
+  [
+   ["Το λευκό φως δεν είναι ένα χρώμα. Είναι όλα τα χρώματα μαζί.", "White light isn't one colour. It is all the colours together."],
+   ["Το βλέπεις όταν βγαίνει ουράνιο τόξο μετά τη βροχή.", "You can see this when a rainbow comes out after the rain."],
+   ["Οι σταγόνες της βροχής χωρίζουν το φως σε κόκκινο, πορτοκαλί, κίτρινο, πράσινο, μπλε και μωβ.", "The raindrops split the light into red, orange, yellow, green, blue and violet."]
+  ],
+  [
+   ["Τώρα σκέψου τον αέρα.", "Now think about the air."],
+   ["Ο αέρας είναι γεμάτος πολύ, πολύ μικρά σωματίδια, που δεν τα βλέπουμε.", "The air is full of very, very small particles that we can't see."],
+   ["Όταν το φως του ήλιου περνάει από τον αέρα, χτυπάει πάνω σε αυτά.", "When sunlight passes through the air, it hits them."],
+   ["Το κόκκινο φως συνήθως περνάει και συνεχίζει τον δρόμο του.", "Red light usually goes past and continues on its way."],
+   ["Το μπλε φως όμως σκορπίζεται: αλλάζει κατεύθυνση ξανά και ξανά και πηγαίνει παντού.", "But blue light scatters: it changes direction again and again and goes everywhere."],
+   ["Έτσι, όπου κι αν κοιτάξεις στον ουρανό, έρχεται προς τα μάτια σου μπλε φως.", "So wherever you look in the sky, blue light is coming towards your eyes."]
+  ],
+  [
+   ["Το μωβ φως σκορπίζεται ακόμα περισσότερο από το μπλε.", "Violet light scatters even more than blue."],
+   ["Τότε γιατί ο ουρανός δεν είναι μωβ;", "Then why isn't the sky violet?"],
+   ["Γιατί ο ήλιος στέλνει λιγότερο μωβ φως, και τα μάτια μας βλέπουν πιο εύκολα το μπλε.", "Because the sun sends out less violet light, and our eyes see blue more easily."]
+  ],
+  [
+   ["Το βράδυ ο ήλιος είναι χαμηλά.", "In the evening the sun is low."],
+   ["Τότε το φως του κάνει πολύ μεγαλύτερο ταξίδι μέσα στον αέρα για να φτάσει σε μας.", "Then its light makes a much longer journey through the air to reach us."],
+   ["Στον δρόμο χάνει σχεδόν όλο το μπλε.", "On the way it loses almost all of the blue."],
+   ["Μένουν το κόκκινο και το πορτοκαλί, και γι' αυτό το ηλιοβασίλεμα έχει αυτά τα ζεστά χρώματα.", "The red and orange are left, and that is why the sunset has these warm colours."],
+   ["Στη Σαντορίνη χιλιάδες τουρίστες μαζεύονται κάθε βράδυ στην Οία μόνο για να το δουν.", "In Santorini thousands of tourists gather in Oia every evening just to see it."]
+  ],
+  [
+   ["Και στη Σελήνη; Εκεί δεν υπάρχει αέρας.", "And on the Moon? There is no air there."],
+   ["Χωρίς αέρα το φως δεν σκορπίζεται, και ο ουρανός είναι μαύρος ακόμα και το μεσημέρι.", "Without air the light doesn't scatter, and the sky is black even at midday."],
+   ["Οι αστροναύτες που περπάτησαν στη Σελήνη έβλεπαν τον ήλιο να λάμπει σε έναν μαύρο ουρανό.", "The astronauts who walked on the Moon saw the sun shining in a black sky."]
+  ]
+ ],
+ "notes": [
+  {"form": "γαλάζιος", "lemma": "γαλάζιος", "gloss": "light blue, sky blue", "note": "Greek uses γαλάζιο for the sky and the sea, μπλε for darker blue."},
+  {"form": "ουράνιο τόξο", "lemma": "ουράνιο τόξο", "gloss": "rainbow", "note": "Literally \"heavenly bow\"."},
+  {"form": "σταγόνες", "lemma": "σταγόνα", "gloss": "drop"},
+  {"form": "μωβ", "lemma": "μωβ", "gloss": "purple, violet", "note": "Does not change its ending."},
+  {"form": "σωματίδια", "lemma": "σωματίδιο", "gloss": "particle"},
+  {"form": "σκορπίζεται", "lemma": "σκορπίζομαι", "gloss": "scatters, spreads out", "note": "Active σκορπίζω = to scatter something."},
+  {"form": "κατεύθυνση", "lemma": "κατεύθυνση", "gloss": "direction"},
+  {"form": "όπου κι αν", "lemma": "όπου κι αν", "gloss": "wherever"},
+  {"form": "ηλιοβασίλεμα", "lemma": "ηλιοβασίλεμα", "gloss": "sunset", "note": "ήλιος + βασιλεύω (of the sun: to set)."},
+  {"form": "Σελήνη", "lemma": "Σελήνη", "gloss": "the Moon", "note": "In everyday speech: το φεγγάρι."},
+  {"form": "αστροναύτες", "lemma": "αστροναύτης", "gloss": "astronaut"},
+  {"form": "λάμπει", "lemma": "λάμπω", "gloss": "to shine"}
+ ],
+ "questions": [
+  {"q": "Τι είναι το λευκό φως του ήλιου;", "q_en": "What is the sun's white light?", "options": ["Όλα τα χρώματα μαζί.", "Μόνο μπλε φως.", "Μόνο κίτρινο φως."], "answer": 0},
+  {"q": "Ποιο φως σκορπίζεται πιο εύκολα στον αέρα;", "q_en": "Which light scatters more easily in the air?", "options": ["Το κόκκινο.", "Το μπλε.", "Το πορτοκαλί."], "answer": 1},
+  {"q": "Γιατί το ηλιοβασίλεμα είναι κόκκινο;", "q_en": "Why is the sunset red?", "options": ["Γιατί ο ήλιος είναι πιο ζεστός το βράδυ.", "Γιατί το φως κάνει μεγαλύτερο ταξίδι και χάνει το μπλε.", "Γιατί η θάλασσα είναι κόκκινη."], "answer": 1},
+  {"q": "Τι χρώμα έχει ο ουρανός στη Σελήνη;", "q_en": "What colour is the sky on the Moon?", "options": ["Γαλάζιο.", "Κόκκινο.", "Μαύρο."], "answer": 2}
+ ]
+}

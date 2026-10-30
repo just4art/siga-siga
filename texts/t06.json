@@ -1,0 +1,66 @@
+{
+ "id": "t06",
+ "series": "true",
+ "chapter": 6,
+ "title": "Το μοναστήρι των γατών",
+ "title_en": "The monastery of the cats",
+ "level": "A2+",
+ "theme": "history",
+ "summary_en": "The monastery of Saint Nicholas of the Cats near Limassol, and the old legend of the cats that were brought to Cyprus to fight the snakes.",
+ "paragraphs": [
+  [
+   ["Κοντά στη Λεμεσό, στη χερσόνησο του Ακρωτηρίου, υπάρχει ένα μικρό, παλιό μοναστήρι.", "Near Limassol, on the Akrotiri peninsula, there is a small, old monastery."],
+   ["Λέγεται Άγιος Νικόλαος των Γατών.", "It is called Saint Nicholas of the Cats."],
+   ["Αν το επισκεφτείς, θα καταλάβεις αμέσως γιατί: γάτες παντού!", "If you visit it, you will understand at once why: cats everywhere!"],
+   ["Γάτες στην αυλή, γάτες στα σκαλιά, γάτες που κοιμούνται στον ήλιο.", "Cats in the courtyard, cats on the steps, cats sleeping in the sun."]
+  ],
+  [
+   ["Για αυτές τις γάτες υπάρχει ένας παλιός θρύλος.", "There is an old legend about these cats."],
+   ["Λένε ότι τον 4ο αιώνα στην Κύπρο δεν έβρεξε για πολλά χρόνια.", "They say that in the 4th century it didn't rain in Cyprus for many years."],
+   ["Οι άνθρωποι έφυγαν από τα χωριά, και ο τόπος γέμισε φίδια.", "People left the villages, and the land filled with snakes."],
+   ["Τότε ήρθε στην Κύπρο η Αγία Ελένη, η μητέρα του αυτοκράτορα Κωνσταντίνου.", "Then Saint Helena, the mother of the emperor Constantine, came to Cyprus."],
+   ["Είδε τα φίδια και είχε μια ιδέα: έφερε στο νησί πολλές γάτες από την Αίγυπτο και την Παλαιστίνη.", "She saw the snakes and had an idea: she brought many cats to the island from Egypt and Palestine."]
+  ],
+  [
+   ["Οι μοναχοί του μοναστηριού φρόντιζαν τις γάτες.", "The monks of the monastery looked after the cats."],
+   ["Σύμφωνα με τον θρύλο, το πρωί χτυπούσε η καμπάνα και οι γάτες έτρεχαν για φαγητό.", "According to the legend, in the morning the bell rang and the cats ran to eat."],
+   ["Μετά πήγαιναν στα χωράφια για να κυνηγήσουν φίδια.", "Then they went out into the fields to hunt snakes."],
+   ["Το βράδυ, όταν χτυπούσε ξανά η καμπάνα, γύριζαν στο μοναστήρι.", "In the evening, when the bell rang again, they came back to the monastery."],
+   ["Πολλές γάτες είχαν σημάδια από τις μάχες, και κάποιες είχαν χάσει ένα μάτι ή ένα αυτί.", "Many cats had scars from the fights, and some had lost an eye or an ear."]
+  ],
+  [
+   ["Ακόμα και το ακρωτήρι εκεί κοντά λέγεται Κάβο Γάτα.", "Even the cape nearby is called Cape Gata, the cape of the cats."],
+   ["Πόσα από όλα αυτά είναι αλήθεια; Δεν ξέρουμε.", "How much of all this is true? We don't know."],
+   ["Ξέρουμε όμως ότι στην περιοχή υπάρχουν φίδια ακόμα και σήμερα, και ότι οι γάτες τα κυνηγούν.", "But we do know that there are still snakes in the area today, and that the cats hunt them."]
+  ],
+  [
+   ["Σήμερα στο μοναστήρι ζουν μερικές μοναχές.", "Today a few nuns live in the monastery."],
+   ["Φροντίζουν τον κήπο, την εκκλησία και, φυσικά, τις γάτες.", "They look after the garden, the church and, of course, the cats."],
+   ["Οι επισκέπτες έρχονται για να δουν την παλιά εκκλησία, αλλά οι περισσότεροι μένουν για να χαϊδέψουν τις γάτες.", "Visitors come to see the old church, but most of them stay to stroke the cats."],
+   ["Αν πας, μη βιαστείς να φύγεις.", "If you go, don't be in a hurry to leave."],
+   ["Εδώ τα αφεντικά είναι οι γάτες.", "Here the cats are the bosses."]
+  ]
+ ],
+ "notes": [
+  {"form": "χερσόνησο", "lemma": "χερσόνησος", "gloss": "peninsula", "note": "η χερσόνησος: feminine, though it ends in -ος."},
+  {"form": "μοναστήρι", "lemma": "μοναστήρι", "gloss": "monastery"},
+  {"form": "αυλή", "lemma": "αυλή", "gloss": "courtyard, yard"},
+  {"form": "σκαλιά", "lemma": "σκαλί", "gloss": "steps, stairs"},
+  {"form": "θρύλος", "lemma": "θρύλος", "gloss": "legend"},
+  {"form": "φίδια", "lemma": "φίδι", "gloss": "snakes"},
+  {"form": "αυτοκράτορα", "lemma": "αυτοκράτορας", "gloss": "emperor"},
+  {"form": "μοναχοί", "lemma": "μοναχός", "gloss": "monks", "note": "η μοναχή = nun."},
+  {"form": "καμπάνα", "lemma": "καμπάνα", "gloss": "bell (of a church)"},
+  {"form": "κυνηγήσουν", "lemma": "κυνηγάω", "gloss": "to hunt, chase"},
+  {"form": "σημάδια", "lemma": "σημάδι", "gloss": "marks, scars; signs"},
+  {"form": "ακρωτήρι", "lemma": "ακρωτήρι", "gloss": "cape, headland", "note": "The peninsula near Limassol is called Ακρωτήρι."},
+  {"form": "χαϊδέψουν", "lemma": "χαϊδεύω", "gloss": "to stroke, pet"},
+  {"form": "αφεντικά", "lemma": "αφεντικό", "gloss": "bosses", "note": "το αφεντικό, even for a man or a woman."}
+ ],
+ "questions": [
+  {"q": "Πού βρίσκεται το μοναστήρι;", "q_en": "Where is the monastery?", "options": ["Κοντά στη Λευκωσία.", "Κοντά στη Λεμεσό.", "Στην Αθήνα."], "answer": 1},
+  {"q": "Γιατί, σύμφωνα με τον θρύλο, έφεραν γάτες στην Κύπρο;", "q_en": "According to the legend, why were cats brought to Cyprus?", "options": ["Για να κυνηγούν φίδια.", "Για να κυνηγούν ποντίκια.", "Για να τις πουλήσουν."], "answer": 0},
+  {"q": "Τι έκανε η καμπάνα για τις γάτες;", "q_en": "What did the bell do for the cats?", "options": ["Τις ξυπνούσε τη νύχτα.", "Τις τρόμαζε.", "Τις καλούσε για φαγητό και για να γυρίσουν."], "answer": 2},
+  {"q": "Ποιοι ζουν σήμερα στο μοναστήρι;", "q_en": "Who lives in the monastery today?", "options": ["Μερικές μοναχές και πολλές γάτες.", "Πολλοί μοναχοί και κανένα ζώο.", "Κανείς."], "answer": 0}
+ ]
+}
