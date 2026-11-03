@@ -300,20 +300,33 @@ App.newOrder = function () {
   return App.words.filter(function (w) { return App.cardState(w.greek) === 'new' && !(S.cards[w.greek] && S.cards[w.greek].sus); })
     .map(function (w) { return [rank(w), w]; }).sort(function (a, b) { return a[0] - b[0]; }).map(function (x) { return x[1]; });
 };
-App.queue = function () {
-  var now = Date.now(), learn = [], rev = [], nextLearn = Infinity;
+/* Cards to study now; `match` limits them to some words (a part of speech, say). */
+App.queue = function (match) {
+  var now = Date.now(), learn = [], later = [], rev = [], nextLearn = Infinity;
   App.words.forEach(function (w) {
-    var c = S.cards[w.greek]; if (!c || c.sus) return;
-    if (c.st === 'learn') { if (c.due <= now + 60000) learn.push(w); else nextLearn = Math.min(nextLearn, c.due); }
+    var c = S.cards[w.greek]; if (!c || c.sus || (match && !match(w))) return;
+    if (c.st === 'learn') { if (c.due <= now + 60000) learn.push(w); else { later.push(w); nextLearn = Math.min(nextLearn, c.due); } }
     else if (c.st === 'review' && c.due <= now) rev.push(w);
   });
   learn.sort(function (a, b) { return S.cards[a.greek].due - S.cards[b.greek].due; });
   rev.sort(function (a, b) { return S.cards[a.greek].due - S.cards[b.greek].due; });
+  later.sort(function (a, b) { return S.cards[a.greek].due - S.cards[b.greek].due; });
   var d = App.day();
   var newLeft = Math.max(0, S.settings.newPerDay - d.nw);
-  var nw = newLeft ? App.newOrder().slice(0, newLeft) : [];
-  return {learn: learn, rev: rev, nw: nw, nextLearn: nextLearn};
+  var nw = newLeft ? App.newOrder().filter(function (w) { return !match || match(w); }).slice(0, newLeft) : [];
+  return {learn: learn, later: later, rev: rev, nw: nw, nextLearn: nextLearn};
 };
+/* Word types, for practising one kind of word at a time. */
+App.POS_GROUPS = [['all', 'All'], ['noun', 'Nouns'], ['verb', 'Verbs'], ['adjective', 'Adjectives'], ['adverb', 'Adverbs'], ['phrase', 'Phrases'], ['other', 'Other']];
+App.posOf = function (w) {
+  var p = (w.pos || '').toLowerCase();
+  if (/^(noun|verb|adjective|adverb|phrase)$/.test(p)) return p;
+  if (!p && genderOf(w.greek)) return 'noun';
+  if (!p && keyOf(w.greek).indexOf(' ') > 0) return 'phrase';
+  return 'other';
+};
+App.posMatch = function (w, f) { return !f || f === 'all' || App.posOf(w) === f; };
+App.posName = function (f, n) { if (f === 'other') return n === 1 ? 'other word' : 'other words'; var g = App.POS_GROUPS.find(function (x) { return x[0] === f; }); return f === 'all' ? (n === 1 ? 'word' : 'words') : g ? (n === 1 ? g[1].slice(0, -1) : g[1]).toLowerCase() : f; };
 App.dueCount = function () { var q = App.queue(); return q.learn.length + q.rev.length + q.nw.length; };
 
 /* ---------------- speech ---------------- */

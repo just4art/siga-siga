@@ -134,10 +134,10 @@
     items.sort(function (a, b) { return a.e.i - b.e.i; });
     if (!items.length) { box.innerHTML = '<h3 style="margin-top:0">Words from this text</h3><p class="muted small">Every word here is already in your list. Nice.</p>'; return; }
     box.innerHTML = '<h3 style="margin-top:0">Words from this text you don’t have yet</h3><p class="muted small" style="margin-top:-4px">Most common first, so the top of the list gives the most value. Adding one also adds it to your reviews with this sentence as an example.</p><div class="newlist">' +
-      items.slice(0, 30).map(function (it, i) {
+      items.map(function (it, i) {
         var e = it.e, note = noteFor(it.tk);
         return '<div class="nl"><span class="gr ' + gcls(e) + '">' + esc(App.dictHeadword(e)) + '</span><span class="en">' + esc(note ? note.gloss : e.gl) + '</span><button class="btn sm" data-add="' + i + '">+ Add</button></div>';
-      }).join('') + '</div>' + (items.length > 30 ? '<p class="small muted">…and ' + (items.length - 30) + ' more (tap them in the text).</p>' : '');
+      }).join('') + '</div>';
     $$('[data-add]', box).forEach(function (b) {
       b.onclick = function () {
         var it = items[+b.dataset.add], e = it.e, note = noteFor(it.tk);

@@ -1,4 +1,4 @@
-/* Play: five short games, each aimed at a different part of Greek. All of them draw on your own word list. */
+/* Play: short games, each aimed at a different part of Greek. All of them draw on your own word list. */
 'use strict';
 (function () {
   var u = App.u, S = App.S, $ = u.$, $$ = u.$$, esc = u.esc;
@@ -9,6 +9,8 @@
     {id: 'art', icon: 'ο η το', name: 'Ο, η, το?', desc: 'Sixty seconds. Give each noun its article. Wrong answers cost three seconds.', start: artGame},
     {id: 'stress', icon: 'ά', name: 'Where’s the stress?', desc: 'The accent marks are gone. Tap the vowel that carries the stress. Ten words.', start: stressGame},
     {id: 'listen', icon: '🔊', name: 'Listen', desc: 'Hear a word, pick its meaning. Ten words, trains your ear for real speech.', start: listenGame},
+    {id: 'spell', icon: 'λ ξ ω', name: 'Spell it', desc: 'See the English, put the Greek word together from its letters. Ten words.', start: spellGame},
+    {id: 'pairs', icon: '⇆', name: 'Pairs', desc: 'Match Greek words with their meanings, five at a time. Three boards.', start: pairsGame},
     {id: 'conj', icon: 'είπα', name: 'Verb forms', desc: 'Pick the right form: εσύ in the past, εμείς in the future… Twelve rounds with your verbs.', start: conjGame},
     {id: 'build', icon: '⇄', name: 'Build the sentence', desc: 'Put the words in order, using sentences from the stories. Six sentences.', start: buildGame}
   ];
@@ -16,14 +18,27 @@
   function stop() { clearInterval(timer); timer = null; if (keyHandler) document.removeEventListener('keydown', keyHandler); keyHandler = null; App.hush(); }
   function onKey(fn) { if (keyHandler) document.removeEventListener('keydown', keyHandler); keyHandler = function (e) { if (App.current === 'play' && !e.metaKey && !e.ctrlKey) fn(e); }; document.addEventListener('keydown', keyHandler); }
 
+  // the word type chosen on the Play page; used by the games that take any kind of word
+  var TYPED = {stress: 1, listen: 1, spell: 1, pairs: 1};
+  function playPos() { return S.settings.playPos || 'all'; }
+  function mine(w) { return App.posMatch(w, playPos()); }
   function hub() {
     stop();
-    root.innerHTML = '<h1>Play</h1><p class="sub">Short games for the parts of Greek that flashcards don’t cover well: articles, stress, listening, verb forms and word order. One game a day completes the daily plan.</p><div class="games">' +
+    root.innerHTML = '<h1>Play</h1><p class="sub">Short games for the parts of Greek that flashcards don’t cover well: articles, stress, listening, spelling, verb forms and word order. One game a day completes the daily plan.</p>' +
+      '<div class="row" style="margin:-6px 0 16px;gap:8px"><span class="small muted">Words for Stress, Listen, Spell it and Pairs:</span><div class="chips" id="p-pos">' +
+      App.POS_GROUPS.filter(function (p) { return p[0] !== 'other'; }).map(function (p) { return '<button data-p="' + p[0] + '"' + (playPos() === p[0] ? ' class="on"' : '') + '>' + p[1] + '</button>'; }).join('') + '</div></div><div class="games">' +
       GAMES.map(function (g) {
         var best = S.games[g.id];
         return '<button class="gcard" data-g="' + g.id + '"><span class="gi gr">' + esc(g.icon) + '</span><b>' + esc(g.name) + '</b><span>' + esc(g.desc) + '</span><span class="best">' + (best != null ? 'Best: ' + best : 'Not played yet') + '</span></button>';
       }).join('') + '</div>';
     $$('.gcard', root).forEach(function (b) { b.onclick = function () { GAMES.find(function (g) { return g.id === b.dataset.g; }).start(); }; });
+    $$('#p-pos button', root).forEach(function (b) { b.onclick = function () { S.settings.playPos = b.dataset.p; App.save(); hub(); }; });
+  }
+  function byId(id) { return GAMES.find(function (g) { return g.id === id; }); }
+  function notEnough(g) {
+    var f = TYPED[g.id] && playPos() !== 'all';
+    stage(g, '<div class="card"><p>Not enough ' + (f ? App.posName(playPos(), 2) : 'words') + ' in your list for this game yet.</p>' + (f ? '<button class="btn" id="g-allw">Use all words</button>' : '') + '</div>');
+    if (f) $('#g-allw').onclick = function () { S.settings.playPos = 'all'; App.save(); g.start(); };
   }
   function stage(g, inner) {
     root.innerHTML = '<div class="stage"><div class="ghead"><button class="btn sm ghost" id="g-back">← Games</button><h2>' + esc(g.name) + '</h2></div>' + inner + '</div>';
@@ -36,7 +51,8 @@
     App.day().games++;
     App.addXP(Math.min(40, xp));
     App.save();
-    stage(g, '<div class="card result"><div class="big">' + score + '</div><p class="muted">' + (best && prev != null ? 'New best! (was ' + prev + ')' : prev != null ? 'Best: ' + prev : 'First score') + ' · +' + Math.min(40, xp) + ' XP</p>' +
+    var f = TYPED[g.id] && playPos() !== 'all' ? ' · ' + App.posName(playPos(), 2) + ' only' : '';
+    stage(g, '<div class="card result"><div class="big">' + score + '</div><p class="muted">' + (best && prev != null ? 'New best! (was ' + prev + ')' : prev != null ? 'Best: ' + prev : 'First score') + ' · +' + Math.min(40, xp) + ' XP' + f + '</p>' +
       (lines || '') + '<div class="row" style="justify-content:center;margin-top:16px"><button class="btn" id="g-hub">All games</button><button class="btn pri" id="g-again">Play again</button></div></div>');
     $('#g-hub').onclick = hub; $('#g-again').onclick = g.start;
   }
@@ -52,7 +68,7 @@
     var g = GAMES[0];
     var nouns = App.words.filter(function (w) { return /^(ο|η|το) \S+$/.test(w.greek); });
     if (nouns.length < 10) return stage(g, '<p>Not enough nouns with articles in your list yet.</p>');
-    var deck = u.shuffle(nouns), i = 0, score = 0, streak = 0, left = 60, missed = [], lock = false;
+    var deck = u.shuffle(nouns), i = 0, score = 0, streak = 0, left = 60, log = [], seen = {}, lock = false;
     stage(g, '<div class="timer"><i id="a-t" style="width:100%"></i></div><div class="gscore"><span>Score <b id="a-s">0</b></span><span>Streak <b id="a-k">0</b></span><span class="spacer"></span><span><b id="a-l">60</b>s</span></div>' +
       '<div class="bigword" id="a-w"></div><div class="hint" id="a-h"></div>' +
       '<div class="choices c3 art"><button class="m" data-a="ο">ο</button><button class="f" data-a="η">η</button><button class="n" data-a="το">το</button></div><div class="kbd"><kbd>1</kbd> ο · <kbd>2</kbd> η · <kbd>3</kbd> το</div>');
@@ -61,11 +77,13 @@
       if (lock || left <= 0) return;
       var w = deck[i % deck.length], right = w.greek.split(' ')[0];
       var bw = $('#a-w');
+      var x = seen[w.greek] || (seen[w.greek] = log[log.push({ok: true, gr: w.greek, en: w.english, cls: App.genderClass(w.greek)}) - 1]);
+      if (a !== right) { x.ok = false; x.note = 'you chose ' + a; }
       if (a === right) { streak++; score += 1 + (streak >= 5 ? 1 : 0); bw.className = 'bigword flashfb ' + App.genderClass(w.greek); }
-      else { streak = 0; left = Math.max(0, left - 3); missed.push(w); bw.className = 'bigword flashfb'; bw.innerHTML = '<span class="' + App.genderClass(w.greek) + '">' + esc(w.greek) + '</span>'; }
+      else { streak = 0; left = Math.max(0, left - 3); bw.className = 'bigword flashfb'; bw.innerHTML = '<span class="' + App.genderClass(w.greek) + '">' + esc(w.greek) + '</span>'; }
       $('#a-s').textContent = score; $('#a-k').textContent = streak;
       lock = true; i++;
-      setTimeout(function () { $('#a-w').className = 'bigword'; if (left > 0) show(); }, a === right ? 260 : 1100);
+      setTimeout(function () { if (!$('#a-w')) return; $('#a-w').className = 'bigword'; if (left > 0) show(); }, a === right ? 260 : 1100);
     }
     $$('.art button', root).forEach(function (b) { b.onclick = function () { answer(b.dataset.a); }; });
     onKey(function (e) { var m = {'1': 'ο', '2': 'η', '3': 'το'}[e.key]; if (m) answer(m); });
@@ -73,8 +91,7 @@
     timer = setInterval(function () {
       left -= 0.25; $('#a-t').style.width = Math.max(0, left / 60 * 100) + '%'; $('#a-l').textContent = Math.max(0, Math.ceil(left));
       if (left <= 0) {
-        var uniq = []; missed.forEach(function (w) { if (uniq.indexOf(w) < 0) uniq.push(w); });
-        result(g, score, score, uniq.length ? '<p class="small muted">To look at again:</p><p class="gr" style="font-size:18px">' + uniq.slice(0, 12).map(function (w) { return '<span class="' + App.genderClass(w.greek) + '">' + esc(w.greek) + '</span>'; }).join(' · ') + '</p>' : '<p>No mistakes!</p>');
+        result(g, score, score, App.resultList(log));
       }
     }, 250);
   }
@@ -98,12 +115,12 @@
   function stressGame() {
     var g = GAMES[1];
     var pool = App.words.filter(function (w) {
-      if (!single(w)) return false;
+      if (!single(w) || !mine(w)) return false;
       var k = App.keyOf(w.greek), us = units(k);
       return us.filter(function (x) { return x.v; }).length >= 2 && us.filter(function (x) { return x.acc; }).length === 1;
     });
-    var list = weighted(pool, 10), i = 0, right = 0, miss = [];
-    if (list.length < 5) return stage(g, '<p>Not enough words yet.</p>');
+    var list = weighted(pool, 10), i = 0, right = 0, log = [];
+    if (list.length < 5) return notEnough(g);
     stage(g, '<div class="gscore"><span>Word <b id="s-i">1</b> / ' + list.length + '</span><span>Correct <b id="s-r">0</b></span></div><div class="syl" id="s-w"></div><div class="hint" id="s-h"></div><div class="row" style="justify-content:center;margin-top:18px"><button class="btn" id="s-next" hidden>Next →</button></div>');
     function show() {
       var w = list[i], k = App.keyOf(w.greek), us = units(k);
@@ -117,8 +134,9 @@
           if ($('#s-w').dataset.done === '1') return;
           $('#s-w').dataset.done = '1';
           var j = +b.dataset.j, ok = us[j].acc;
+          log.push({ok: ok, gr: w.greek, en: w.english, cls: App.genderClass(w.greek), note: ok ? '' : 'you chose ' + noAcc(us[j].t)});
           if (ok) { right++; b.classList.add('right'); b.textContent = us[j].t; }
-          else { miss.push(w); b.classList.add('wrong'); var rb = $$('#s-w button').find(function (x) { return us[+x.dataset.j].acc; }); rb.classList.add('right'); rb.textContent = us[+rb.dataset.j].t; }
+          else { b.classList.add('wrong'); var rb = $$('#s-w button').find(function (x) { return us[+x.dataset.j].acc; }); rb.classList.add('right'); rb.textContent = us[+rb.dataset.j].t; }
           $('#s-r').textContent = right;
           App.say(k);
           $('#s-next').hidden = false; $('#s-next').focus();
@@ -126,7 +144,7 @@
       });
       $('#s-w').dataset.done = '0';
     }
-    $('#s-next').onclick = function () { i++; if (i >= list.length) return result(g, right * 10, right * 2, miss.length ? '<p class="small muted">Missed:</p><p class="gr" style="font-size:18px">' + miss.map(function (w) { return esc(w.greek); }).join(' · ') + '</p>' : '<p>Perfect round!</p>'); show(); };
+    $('#s-next').onclick = function () { i++; if (i >= list.length) return result(g, right * 10, right * 2, App.resultList(log)); show(); };
     onKey(function (e) { if ((e.key === 'Enter' || e.key === ' ') && !$('#s-next').hidden) { e.preventDefault(); $('#s-next').click(); } });
     show();
   }
@@ -135,15 +153,16 @@
   function listenGame() {
     var g = GAMES[2];
     if (!App.hasVoice()) return stage(g, '<div class="card"><p>This game needs a Greek voice for speech, and this browser doesn’t have one. On a Mac, Chrome and Safari use the built-in “Melina” voice (System Settings → Accessibility → Spoken Content → System voice → Manage voices → Greek).</p></div>');
-    var pool = App.words.filter(function (w) { return w.english && App.keyOf(w.greek).length > 2; });
-    var list = weighted(pool, 10), i = 0, right = 0, tries = 0, miss = [];
-    stage(g, '<div class="gscore"><span>Word <b id="l-i">1</b> / 10</span><span>Correct <b id="l-r">0</b></span></div>' +
+    var pool = App.words.filter(function (w) { return w.english && App.keyOf(w.greek).length > 2 && mine(w); });
+    if (pool.length < 6) return notEnough(g);
+    var list = weighted(pool, 10), i = 0, right = 0, tries = 0, log = [], first = '';
+    stage(g, '<div class="gscore"><span>Word <b id="l-i">1</b> / ' + list.length + '</span><span>Correct <b id="l-r">0</b></span></div>' +
       '<div style="text-align:center;margin-top:24px"><button class="btn pri" id="l-play" style="font-size:22px;padding:18px 28px;border-radius:50px">🔊 Play</button> <button class="btn" id="l-slow">🐢 slower</button></div>' +
       '<div class="bigword" id="l-w" style="min-height:56px"></div><div class="choices c2" id="l-c"></div><div class="row" style="justify-content:center;margin-top:16px"><button class="btn" id="l-next" hidden>Next →</button></div>');
     function say(slow) { App.say(App.keyOf(list[i].greek), {rate: slow ? 0.6 : S.settings.rate}); }
     function show() {
       var w = list[i]; tries = 0;
-      $('#l-i').textContent = i + 1; $('#l-w').textContent = ''; $('#l-next').hidden = true;
+      $('#l-i').textContent = i + 1; $('#l-w').textContent = ''; first = ''; $('#l-next').hidden = true;
       var same = pool.filter(function (x) { return x !== w && x.pos === w.pos && x.english !== w.english; });
       var opts = u.shuffle([w].concat(u.shuffle(same.length >= 3 ? same : pool.filter(function (x) { return x !== w; })).slice(0, 3)));
       $('#l-c').innerHTML = opts.map(function (o, j) { return '<button data-j="' + j + '" style="font-size:15px;font-weight:500">' + esc(o.english) + '</button>'; }).join('');
@@ -151,9 +170,11 @@
         b.onclick = function () {
           if ($('#l-c').dataset.done === '1') return;
           var o = opts[+b.dataset.j]; tries++;
+          if (tries === 1 && o !== w) first = o.english;
           if (o === w) {
             b.classList.add('right'); $('#l-c').dataset.done = '1';
-            if (tries === 1) right++; else miss.push(w);
+            if (tries === 1) right++;
+            log.push({ok: tries === 1, gr: w.greek, en: w.english, cls: App.genderClass(w.greek), note: tries === 1 ? '' : 'you picked “' + first + '” first'});
             $('#l-r').textContent = right;
             $('#l-w').innerHTML = '<span class="' + App.genderClass(w.greek) + '">' + esc(w.greek) + '</span>';
             $('#l-next').hidden = false;
@@ -161,11 +182,11 @@
         };
       });
       $('#l-c').dataset.done = '0';
-      setTimeout(function () { say(false); }, 250);
+      setTimeout(function () { if ($('#l-c')) say(false); }, 250);
     }
     $('#l-play').onclick = function () { say(false); };
     $('#l-slow').onclick = function () { say(true); };
-    $('#l-next').onclick = function () { i++; if (i >= list.length) return result(g, right * 10, right * 2, miss.length ? '<p class="small muted">Needed a second listen:</p><p class="gr" style="font-size:18px">' + miss.map(function (w) { return esc(w.greek); }).join(' · ') + '</p>' : ''); show(); };
+    $('#l-next').onclick = function () { i++; if (i >= list.length) return result(g, right * 10, right * 2, App.resultList(log)); show(); };
     onKey(function (e) { if (e.key === ' ' && $('#l-next').hidden) { e.preventDefault(); say(false); } else if ((e.key === 'Enter' || e.key === ' ') && !$('#l-next').hidden) { e.preventDefault(); $('#l-next').click(); } });
     show();
   }
@@ -188,7 +209,7 @@
       var tn = u.pick(tenses); if (!v.t[tn] || !v.t[tn].every(Boolean)) tn = 'pres';
       rounds.push({v: v, tn: tn, p: Math.floor(Math.random() * 6)});
     });
-    var i = 0, right = 0, miss = [];
+    var i = 0, right = 0, log = [];
     stage(g, '<div class="gscore"><span>Round <b id="c-i">1</b> / ' + rounds.length + '</span><span>Correct <b id="c-r">0</b></span></div><div class="conj-prompt" id="c-p"></div><div class="choices c2" id="c-c"></div><div class="hint" id="c-h" style="margin-top:12px"></div><div class="row" style="justify-content:center;margin-top:10px"><button class="btn" id="c-next" hidden>Next →</button></div>');
     function show() {
       var r = rounds[i], v = r.v, ans = v.t[r.tn][r.p];
@@ -203,8 +224,10 @@
         b.onclick = function () {
           if ($('#c-c').dataset.done === '1') return;
           $('#c-c').dataset.done = '1';
-          if (b.textContent === ans) { right++; b.classList.add('right'); }
-          else { miss.push(v.e.w + ' → ' + ans); b.classList.add('wrong'); $$('#c-c button').find(function (x) { return x.textContent === ans; }).classList.add('right'); }
+          var ok = b.textContent === ans;
+          log.push({ok: ok, gr: ans, en: v.e.w + ' (' + v.w.english + ') · ' + PERS[r.p] + ' · ' + TENSE[r.tn][1], note: ok ? '' : 'you picked ' + b.textContent});
+          if (ok) { right++; b.classList.add('right'); }
+          else { b.classList.add('wrong'); $$('#c-c button').find(function (x) { return x.textContent === ans; }).classList.add('right'); }
           $('#c-r').textContent = right;
           $('#c-h').innerHTML = '<span class="gr">' + v.t[r.tn].map(function (f, p) { return p === r.p ? '<b>' + esc(f) + '</b>' : esc(f); }).join(', ') + '</span>';
           App.say(ans);
@@ -212,7 +235,7 @@
         };
       });
     }
-    $('#c-next').onclick = function () { i++; if (i >= rounds.length) return result(g, right * 10, right * 2, miss.length ? '<p class="small muted">Worth another look:</p><p class="gr" style="font-size:17px">' + miss.map(esc).join('<br>') + '</p>' : '<p>All correct!</p>'); show(); };
+    $('#c-next').onclick = function () { i++; if (i >= rounds.length) return result(g, right * 10, right * 2, App.resultList(log)); show(); };
     onKey(function (e) { if ((e.key === 'Enter' || e.key === ' ') && !$('#c-next').hidden) { e.preventDefault(); $('#c-next').click(); } else if (/^[1-4]$/.test(e.key) && $('#c-next').hidden) { var b = $$('#c-c button')[+e.key - 1]; if (b) b.click(); } });
     show();
   }
@@ -232,7 +255,7 @@
         });
       });
     });
-    var list = u.shuffle(cands).slice(0, 6), i = 0, right = 0;
+    var list = u.shuffle(cands).slice(0, 6), i = 0, right = 0, log = [];
     if (!list.length) return stage(g, '<p>No sentences available yet.</p>');
     stage(g, '<div class="gscore"><span>Sentence <b id="b-i">1</b> / ' + list.length + '</span><span>Correct <b id="b-r">0</b></span></div>' +
       '<p style="text-align:center;font-size:17px;margin:18px 0 4px" id="b-en"></p><p class="hint small" id="b-src"></p>' +
@@ -263,14 +286,106 @@
       if (built.length < it.ws.length) { $('#b-h').textContent = 'Use all the words.'; return; }
       var ok = built.every(function (t, k) { return t.w.toLowerCase() === it.ws[k].toLowerCase(); });
       $('#b-a').classList.add(ok ? 'right' : 'wrong');
+      log.push({ok: ok, gr: it.gr, en: it.en, note: ok ? '' : 'yours: ' + built.map(function (t) { return t.w; }).join(' ')});
       if (ok) right++;
       $('#b-r').textContent = right;
       $('#b-h').innerHTML = (ok ? '✓ ' : 'Original: ') + '<span class="gr" style="font-size:18px;color:var(--ink)">' + esc(it.gr) + '</span>';
       App.say(it.gr);
       $('#b-check').hidden = true; $('#b-undo').hidden = true; $('#b-next').hidden = false; $('#b-ok').hidden = ok;
     };
-    $('#b-ok').onclick = function () { right++; $('#b-r').textContent = right; $('#b-ok').hidden = true; $('#b-a').className = 'tiles answer right'; };
-    $('#b-next').onclick = function () { i++; if (i >= list.length) return result(g, right * 10, right * 4); show(); };
+    $('#b-ok').onclick = function () { var x = log[log.length - 1]; x.ok = true; x.note = 'yours, also fine: ' + x.note.slice(7); right++; $('#b-r').textContent = right; $('#b-ok').hidden = true; $('#b-a').className = 'tiles answer right'; };
+    $('#b-next').onclick = function () { i++; if (i >= list.length) return result(g, right * 10, right * 4, App.resultList(log)); show(); };
+    show();
+  }
+
+  /* ---------------- 6. spell it ---------------- */
+  function spellGame() {
+    var g = byId('spell');
+    var pool = App.words.filter(function (w) { return w.english && mine(w) && App.spellable(w); });
+    var met = pool.filter(function (w) { return App.cardState(w.greek) !== 'new'; });
+    var list = weighted(met.length >= 10 ? met : pool, 10), i = 0, score = 0, log = [], sp = null, checked = false;
+    if (list.length < 5) return notEnough(g);
+    stage(g, '<div class="gscore"><span>Word <b id="w-i">1</b> / ' + list.length + '</span><span>Score <b id="w-s">0</b></span></div>' +
+      '<div class="sp-prompt"><div id="w-en"></div><div class="small muted" id="w-pos"></div></div><div class="sp" id="w-sp"></div><div class="hint" id="w-h"></div>' +
+      '<div class="row" style="justify-content:center;margin-top:12px"><button class="btn pri" id="w-check">Check</button><button class="btn pri" id="w-next" hidden>Next →</button></div>' +
+      '<div class="kbd">Tap the letters, or type them on a Greek or Latin keyboard. <kbd>;</kbd> before a vowel adds the accent, <kbd>⌫</kbd> takes a letter back.</div>');
+    function show() {
+      var w = list[i]; checked = false;
+      $('#w-i').textContent = i + 1; $('#w-en').textContent = w.english;
+      $('#w-pos').textContent = (w.pos || '') + (App.genderOf(w.greek) ? ' · with its article' : '');
+      $('#w-h').innerHTML = ''; $('#w-check').hidden = false; $('#w-next').hidden = true;
+      sp = App.spell($('#w-sp'), w, {onFull: check, onEnter: check});
+    }
+    function check() {
+      if (checked) return; checked = true;
+      var w = list[i], r = sp.result(); sp.lock();
+      // half points for help or for the right letters with the wrong article
+      score += r.ok ? (r.hints ? 5 : 10) : r.lettersOk ? 5 : 0;
+      log.push({ok: r.ok, gr: w.greek, en: w.english, cls: App.genderClass(w.greek), note: r.ok ? (r.hints ? r.hints + (r.hints === 1 ? ' hint' : ' hints') : '') : 'you made ' + r.said});
+      $('#w-s').textContent = score;
+      $('#w-h').innerHTML = (r.ok ? '✓ ' : '') + '<span class="gr ' + App.genderClass(w.greek) + '" style="font-size:22px">' + esc(w.greek) + '</span>';
+      App.say(w.greek);
+      $('#w-check').hidden = true; $('#w-next').hidden = false;
+    }
+    function next() { i++; if (i >= list.length) return result(g, score, Math.round(score / 5), App.resultList(log)); show(); }
+    $('#w-check').onclick = check;
+    $('#w-next').onclick = next;
+    onKey(function (e) { if (e.key === 'Enter' && checked) { e.preventDefault(); next(); } });
+    show();
+  }
+
+  /* ---------------- 7. pairs ---------------- */
+  function pairsGame() {
+    var g = byId('pairs');
+    var pool = App.words.filter(function (w) { return w.english && mine(w) && App.cardState(w.greek) !== 'new'; });
+    if (pool.length < 15) pool = App.words.filter(function (w) { return w.english && mine(w); });
+    // fifteen words, no two with the same Greek or the same English
+    var picked = [], seenEn = {}, seenGr = {};
+    weighted(pool, pool.length).forEach(function (w) {
+      var e = w.english.toLowerCase(), k = App.keyOf(w.greek);
+      if (picked.length < 15 && !seenEn[e] && !seenGr[k]) { picked.push(w); seenEn[e] = seenGr[k] = 1; }
+    });
+    if (picked.length < 10) return notEnough(g);
+    var boards = [];
+    for (var b = 0; b + 5 <= picked.length; b += 5) boards.push(picked.slice(b, b + 5));
+    var bi = 0, mistakes = 0, log = {}, order = [], sel = null, t0 = Date.now(), lock = false;
+    stage(g, '<div class="gscore"><span>Board <b id="p-b">1</b> / ' + boards.length + '</span><span>Mistakes <b id="p-m">0</b></span><span class="spacer"></span><span id="p-t">0:00</span></div>' +
+      '<div class="pairs"><div id="p-l"></div><div id="p-r"></div></div>');
+    function clock() { var s = Math.floor((Date.now() - t0) / 1000); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
+    timer = setInterval(function () { var e = $('#p-t'); if (e) e.textContent = clock(); }, 500);
+    function show() {
+      var ws = boards[bi]; sel = null;
+      $('#p-b').textContent = bi + 1;
+      ws.forEach(function (w) { if (!log[w.greek]) { log[w.greek] = {ok: true, gr: w.greek, en: w.english, cls: App.genderClass(w.greek)}; order.push(log[w.greek]); } });
+      $('#p-l').innerHTML = u.shuffle(ws).map(function (w) { return '<button class="gr ' + App.genderClass(w.greek) + '" data-g="' + esc(w.greek) + '">' + esc(w.greek) + '</button>'; }).join('');
+      $('#p-r').innerHTML = u.shuffle(ws).map(function (w) { return '<button data-g="' + esc(w.greek) + '">' + esc(w.english) + '</button>'; }).join('');
+      $$('.pairs button').forEach(function (btn) { btn.onclick = function () { tap(btn); }; });
+    }
+    function tap(btn) {
+      if (lock || btn.classList.contains('done')) return;
+      var side = btn.parentNode.id;
+      if (side === 'p-l') App.say(btn.dataset.g);
+      if (!sel || sel.parentNode.id === side) { if (sel) sel.classList.remove('sel'); sel = btn; btn.classList.add('sel'); return; }
+      var a = sel, ok = a.dataset.g === btn.dataset.g;
+      sel = null; a.classList.remove('sel');
+      if (ok) {
+        a.classList.add('done'); btn.classList.add('done');
+        if ($$('.pairs button:not(.done)').length) return;
+        lock = true;
+        setTimeout(function () { if (!$('#p-b')) return; lock = false; bi++; if (bi >= boards.length) finish(); else show(); }, 450);
+      } else {
+        mistakes++; $('#p-m').textContent = mistakes;
+        // the word you started from is the one you didn't know
+        var x = log[a.dataset.g], other = App.byGreek[btn.dataset.g];
+        x.ok = false; x.note = 'you matched it with ' + (side === 'p-r' ? '“' + other.english + '”' : other.greek);
+        a.classList.add('bad'); btn.classList.add('bad'); lock = true;
+        setTimeout(function () { a.classList.remove('bad'); btn.classList.remove('bad'); lock = false; }, 600);
+      }
+    }
+    function finish() {
+      var n = order.length, score = Math.max(0, n * 10 - mistakes * 5);
+      result(g, score, Math.round(score / 5), '<p class="muted small">' + n + ' pairs in ' + clock() + '</p>' + App.resultList(order));
+    }
     show();
   }
 

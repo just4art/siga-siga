@@ -5,9 +5,15 @@ A small study app for Greek at A2–B1: spaced-repetition flashcards, graded tex
 It is plain HTML and JavaScript with no server. Open `index.html` in a browser, or use the hosted copy on GitHub Pages. Progress is saved in the browser.
 
 ## Daily routine (about 15 minutes)
-1. **Review**: flashcards for the words that are due.
+1. **Review**: flashcards for the words that are due. The day's reviews count as done once nothing is due and no new cards are left; cards you're still learning can wait for next time.
 2. **Read**: one text. Tap a word to see its meaning and save it to your words.
-3. **Play**: one short game (articles, stress, listening, verb forms, word order).
+3. **Play**: one short game (articles, stress, listening, spelling, pairs, verb forms, word order). Each game ends with a list of what was right and wrong.
+
+## Review options
+- The chips above the card limit the review to one word type: nouns, verbs, adjectives, adverbs or phrases.
+- **Practise** (shown when nothing is due) goes through 20 words you've already met, the hardest first, in either direction. It doesn't change when the words are next due.
+- English → Greek cards can be answered in your head, by typing, or by picking the word's letters from tiles. The tiles also take keys from a Greek or a Latin keyboard (Latin keys follow the Greek layout, and `;` before a vowel adds the accent). Set this under **Review settings**.
+- Gender colours: ο words are blue, η words red, and το words plain (white in dark mode).
 
 ## Texts
 - **Ελληνικοί μύθοι**: six Greek myths, A2 to A2+.

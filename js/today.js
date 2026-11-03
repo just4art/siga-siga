@@ -7,17 +7,48 @@
   function greeting() { var hr = new Date().getHours(); return hr < 12 ? 'Καλημέρα' : hr < 21 ? 'Καλησπέρα' : 'Καληνύχτα'; }
   function dayNum() { return Math.floor(Date.parse(u.studyDay()) / 864e5); }
 
+  /* the activity grid: everything by XP, or reviews, reading and games on their own; tap a day to see what you did */
+  var heatBy = 'all';
+  var HEAT = {all: ['Everything', 'var(--green)'], rev: ['Cards', 'var(--green)'], read: ['Reading', 'var(--blue)'], games: ['Games', 'var(--gold)']};
+  function heatVal(l, by) {
+    if (!l) return 0;
+    return by === 'all' ? l.xp || 0 : by === 'rev' ? (l.rev || 0) + (l.prac || 0) : l[by] || 0;
+  }
+  function heatLevel(v, by) {
+    if (!v) return '';
+    if (by === 'read' || by === 'games') return v >= 3 ? 'l4' : v === 2 ? 'l3' : 'l2';
+    return v <= 20 ? 'l1' : v <= 50 ? 'l2' : v <= 100 ? 'l3' : 'l4';
+  }
+  function dayLine(k) {
+    var l = S.log[k] || {}, parts = [];
+    var cards = (l.rev || 0) + (l.prac || 0);
+    if (cards) parts.push(cards + ' card' + (cards === 1 ? '' : 's') + (l.prac ? ' (' + l.prac + ' in practice)' : ''));
+    if (l.read) parts.push(l.read + ' text' + (l.read === 1 ? '' : 's') + ' read');
+    if (l.games) parts.push(l.games + ' game' + (l.games === 1 ? '' : 's'));
+    if (l.added) parts.push(l.added + ' word' + (l.added === 1 ? '' : 's') + ' added');
+    var date = new Date(k + 'T12:00:00').toLocaleDateString(undefined, {weekday: 'short', day: 'numeric', month: 'short'});
+    return '<b>' + date + '</b>: ' + (parts.length ? parts.join(' · ') + ' · ' + (l.xp || 0) + ' XP' : 'nothing yet');
+  }
   function heatmap() {
-    var weeks = 18, cells = '', end = new Date(u.studyDay() + 'T12:00:00');
+    var weeks = 18, cells = '', end = new Date(u.studyDay() + 'T12:00:00'), tot = {rev: 0, read: 0, games: 0, days: 0};
     var start = new Date(end); start.setDate(start.getDate() - (weeks - 1) * 7);
     // align the first column to a Monday
     while (start.getDay() !== 1) start.setDate(start.getDate() - 1);
     for (var d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
-      var k = u.todayKey(d.getTime()), l = S.log[k], xp = l ? l.xp : 0;
-      var lv = xp === 0 ? '' : xp <= 20 ? 'l1' : xp <= 50 ? 'l2' : xp <= 100 ? 'l3' : 'l4';
-      cells += '<i class="' + lv + (k === u.studyDay() ? ' today' : '') + '" title="' + k + ': ' + xp + ' XP"></i>';
+      var k = u.todayKey(d.getTime()), l = S.log[k], v = heatVal(l, heatBy);
+      if (l) { tot.rev += heatVal(l, 'rev'); tot.read += l.read || 0; tot.games += l.games || 0; if (l.xp) tot.days++; }
+      cells += '<i data-k="' + k + '" class="' + heatLevel(v, heatBy) + (k === u.studyDay() ? ' today' : '') + '"></i>';
     }
-    return '<div class="heat">' + cells + '</div>';
+    return '<div class="chips" id="heat-by" style="margin-bottom:12px">' + Object.keys(HEAT).map(function (b) { return '<button data-b="' + b + '"' + (heatBy === b ? ' class="on"' : '') + '>' + HEAT[b][0] + '</button>'; }).join('') + '</div>' +
+      '<div class="heat" style="--hc:' + HEAT[heatBy][1] + '">' + cells + '</div>' +
+      '<p class="small" id="heat-day" style="margin:10px 0 0">' + dayLine(u.studyDay()) + '</p>' +
+      '<p class="small muted" style="margin:4px 0 0">In these 18 weeks: ' + tot.days + ' active day' + (tot.days === 1 ? '' : 's') + ' · ' + tot.rev + ' cards · ' + tot.read + ' text' + (tot.read === 1 ? '' : 's') + ' read · ' + tot.games + ' game' + (tot.games === 1 ? '' : 's') + '</p>';
+  }
+  function bindHeat() {
+    $$('#heat-by button', root).forEach(function (b) { b.onclick = function () { heatBy = b.dataset.b; $('#heat-box').innerHTML = heatmap(); bindHeat(); }; });
+    $$('.heat i', root).forEach(function (c) {
+      c.onclick = function () { $$('.heat i.sel', root).forEach(function (x) { x.classList.remove('sel'); }); c.classList.add('sel'); $('#heat-day').innerHTML = dayLine(c.dataset.k); };
+    });
   }
 
   function render() {
@@ -59,8 +90,9 @@
         '<div class="legend"><span><i style="background:var(--green)"></i>well known ' + counts.mature + '</span><span><i style="background:var(--gold)"></i>getting there ' + counts.young + '</span><span><i style="background:var(--terra)"></i>learning ' + counts.learn + '</span><span><i style="background:var(--panel2);border:1px solid var(--line)"></i>not started ' + counts.new + '</span></div></div>' +
         (wd ? '<div class="card wotd"><div class="small muted">Word of the day · one of the most common words you don’t have yet</div><div class="row" style="margin-top:4px"><span class="gr ' + (wd.pos === 'n' ? ({m: 'g-m', f: 'g-f', n: 'g-n'}[wd.g] || '') : '') + '">' + esc(App.dictHeadword(wd)) + '</span><button class="btn sm ghost" id="wd-say">🔊</button><span class="spacer"></span><button class="btn sm" id="wd-add">+ Add</button></div><div>' + esc(wd.gl) + '</div></div>' : '') +
       '</div></div>' +
-      '<h2>Last 18 weeks</h2><div class="card">' + heatmap() + '</div>';
+      '<h2>Last 18 weeks</h2><div class="card" id="heat-box">' + heatmap() + '</div>';
 
+    bindHeat();
     $$('[data-go]', root).forEach(function (b) { b.onclick = function () { App.show(b.dataset.go); }; });
     $$('[data-text]', root).forEach(function (b) { b.onclick = function () { if (b.dataset.text) App.openText(b.dataset.text); else App.show('read', '__tab'); }; });
     $$('[data-game]', root).forEach(function (b) { b.onclick = function () { App.show('play'); App.games.find(function (g) { return g.id === b.dataset.game; }).start(); }; });
